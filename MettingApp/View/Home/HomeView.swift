@@ -9,11 +9,18 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel: HomeViewModel
+    @State private var isPopup: Bool = false
+    @State private var opacity: Bool = false
     
     var body: some View {
         contentView
             .navigationBarBackButtonHidden(true)
             .toolbar(.hidden, for: .tabBar)
+            .fullScreenCover(isPresented: $isPopup) {
+                HomePopupView(isPopup: $isPopup)
+                    .presentationBackground(.black.opacity(0.7))
+                    .environmentObject(viewModel)
+            }
     }
     
     @ViewBuilder
@@ -64,8 +71,8 @@ struct HomeView: View {
                 }
                 .font(.system(size: 15, weight: .semibold))
                 Spacer()
-                Button  {
-                    //TODO: - 초대코드 팝업 열기
+                Button {
+                    isPopup = true
                 } label: {
                     VStack {
                         Image(systemName: "plus")
