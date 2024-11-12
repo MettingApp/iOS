@@ -11,7 +11,7 @@ import SwiftUI
 struct MettingAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }

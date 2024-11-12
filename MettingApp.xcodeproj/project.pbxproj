@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E48904D22CE32619003F566A /* MettingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48904D12CE32619003F566A /* MettingAppApp.swift */; };
-		E48904D42CE32619003F566A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48904D32CE32619003F566A /* ContentView.swift */; };
+		E48904D42CE32619003F566A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48904D32CE32619003F566A /* SplashView.swift */; };
 		E48904D62CE3261B003F566A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48904D52CE3261B003F566A /* Assets.xcassets */; };
 		E48904D92CE3261B003F566A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48904D82CE3261B003F566A /* Preview Assets.xcassets */; };
 		E48904E32CE3261C003F566A /* MettingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48904E22CE3261C003F566A /* MettingAppTests.swift */; };
@@ -19,6 +19,16 @@
 		E48905052CE3299B003F566A /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905042CE3299B003F566A /* View + Extension.swift */; };
 		E489050A2CE32A2C003F566A /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905092CE32A2C003F566A /* DIContainer.swift */; };
 		E489050C2CE32A9A003F566A /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489050B2CE32A9A003F566A /* Services.swift */; };
+		E48905102CE32E7C003F566A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489050F2CE32E7C003F566A /* HomeView.swift */; };
+		E48905122CE32EB5003F566A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905112CE32EB5003F566A /* HomeViewModel.swift */; };
+		E48905142CE32ED5003F566A /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905132CE32ED5003F566A /* Phase.swift */; };
+		E48905162CE3351E003F566A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905152CE3351E003F566A /* LoadingView.swift */; };
+		E489051B2CE3366C003F566A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E489051A2CE3366C003F566A /* Kingfisher */; };
+		E489051D2CE33697003F566A /* bell.gif in Resources */ = {isa = PBXBuildFile; fileRef = E489051C2CE33697003F566A /* bell.gif */; };
+		E48905212CE33A28003F566A /* OrganazationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905202CE33A28003F566A /* OrganazationViewCell.swift */; };
+		E48905242CE33DC5003F566A /* organazationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905232CE33DC5003F566A /* organazationModel.swift */; };
+		E48905262CE3437F003F566A /* SeperateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905252CE3437F003F566A /* SeperateView.swift */; };
+		E48905282CE343F7003F566A /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905272CE343F7003F566A /* ScheduleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +51,7 @@
 /* Begin PBXFileReference section */
 		E48904CE2CE32619003F566A /* MettingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MettingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48904D12CE32619003F566A /* MettingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MettingAppApp.swift; sourceTree = "<group>"; };
-		E48904D32CE32619003F566A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E48904D32CE32619003F566A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		E48904D52CE3261B003F566A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E48904D82CE3261B003F566A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E48904DE2CE3261C003F566A /* MettingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MettingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +64,16 @@
 		E48905042CE3299B003F566A /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
 		E48905092CE32A2C003F566A /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		E489050B2CE32A9A003F566A /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		E489050F2CE32E7C003F566A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E48905112CE32EB5003F566A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E48905132CE32ED5003F566A /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
+		E48905152CE3351E003F566A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E48905182CE33667003F566A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E489051C2CE33697003F566A /* bell.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bell.gif; sourceTree = "<group>"; };
+		E48905202CE33A28003F566A /* OrganazationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationViewCell.swift; sourceTree = "<group>"; };
+		E48905232CE33DC5003F566A /* organazationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = organazationModel.swift; sourceTree = "<group>"; };
+		E48905252CE3437F003F566A /* SeperateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeperateView.swift; sourceTree = "<group>"; };
+		E48905272CE343F7003F566A /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E489051B2CE3366C003F566A /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +109,7 @@
 				E48904E12CE3261C003F566A /* MettingAppTests */,
 				E48904EB2CE3261C003F566A /* MettingAppUITests */,
 				E48904CF2CE32619003F566A /* Products */,
+				E48905192CE3366C003F566A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +126,7 @@
 		E48904D02CE32619003F566A /* MettingApp */ = {
 			isa = PBXGroup;
 			children = (
+				E48905182CE33667003F566A /* Info.plist */,
 				E48904D12CE32619003F566A /* MettingAppApp.swift */,
 				E48905082CE32A15003F566A /* Provider */,
 				E48904FE2CE32693003F566A /* Services */,
@@ -146,7 +169,9 @@
 		E48904FB2CE3267E003F566A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E48904D32CE32619003F566A /* ContentView.swift */,
+				E489050E2CE32E64003F566A /* Organazation */,
+				E489050D2CE32E59003F566A /* Home */,
+				E48904D32CE32619003F566A /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +179,8 @@
 		E48904FC2CE32684003F566A /* General */ = {
 			isa = PBXGroup;
 			children = (
+				E48905152CE3351E003F566A /* LoadingView.swift */,
+				E48905252CE3437F003F566A /* SeperateView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -178,6 +205,7 @@
 		E48905032CE32975003F566A /* Reference */ = {
 			isa = PBXGroup;
 			children = (
+				E489051C2CE33697003F566A /* bell.gif */,
 				E48904D52CE3261B003F566A /* Assets.xcassets */,
 				E48904FF2CE327E4003F566A /* Color.xcassets */,
 			);
@@ -187,6 +215,8 @@
 		E48905062CE329EA003F566A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E48905222CE33DBB003F566A /* Home */,
+				E48905132CE32ED5003F566A /* Phase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +236,47 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		E489050D2CE32E59003F566A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E489051E2CE33A0F003F566A /* Section */,
+				E489050F2CE32E7C003F566A /* HomeView.swift */,
+				E48905112CE32EB5003F566A /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E489050E2CE32E64003F566A /* Organazation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Organazation;
+			sourceTree = "<group>";
+		};
+		E48905192CE3366C003F566A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E489051E2CE33A0F003F566A /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				E48905202CE33A28003F566A /* OrganazationViewCell.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		E48905222CE33DBB003F566A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E48905232CE33DC5003F566A /* organazationModel.swift */,
+				E48905272CE343F7003F566A /* ScheduleModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +293,9 @@
 			dependencies = (
 			);
 			name = MettingApp;
+			packageProductDependencies = (
+				E489051A2CE3366C003F566A /* Kingfisher */,
+			);
 			productName = MettingApp;
 			productReference = E48904CE2CE32619003F566A /* MettingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -294,6 +368,9 @@
 				Base,
 			);
 			mainGroup = E48904C52CE32618003F566A;
+			packageReferences = (
+				E48905172CE33573003F566A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E48904CF2CE32619003F566A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -313,6 +390,7 @@
 				E48904D92CE3261B003F566A /* Preview Assets.xcassets in Resources */,
 				E48904D62CE3261B003F566A /* Assets.xcassets in Resources */,
 				E48905002CE327E4003F566A /* Color.xcassets in Resources */,
+				E489051D2CE33697003F566A /* bell.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,12 +415,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48905242CE33DC5003F566A /* organazationModel.swift in Sources */,
 				E48905052CE3299B003F566A /* View + Extension.swift in Sources */,
+				E48905102CE32E7C003F566A /* HomeView.swift in Sources */,
 				E489050C2CE32A9A003F566A /* Services.swift in Sources */,
-				E48904D42CE32619003F566A /* ContentView.swift in Sources */,
+				E48905162CE3351E003F566A /* LoadingView.swift in Sources */,
+				E48905212CE33A28003F566A /* OrganazationViewCell.swift in Sources */,
+				E48905122CE32EB5003F566A /* HomeViewModel.swift in Sources */,
+				E48905262CE3437F003F566A /* SeperateView.swift in Sources */,
+				E48905282CE343F7003F566A /* ScheduleModel.swift in Sources */,
+				E48904D42CE32619003F566A /* SplashView.swift in Sources */,
 				E489050A2CE32A2C003F566A /* DIContainer.swift in Sources */,
 				E48904D22CE32619003F566A /* MettingAppApp.swift in Sources */,
 				E48905022CE32814003F566A /* Color + Extension.swift in Sources */,
+				E48905142CE32ED5003F566A /* Phase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +595,7 @@
 				DEVELOPMENT_TEAM = Q653PU93R6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MettingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -538,6 +625,7 @@
 				DEVELOPMENT_TEAM = Q653PU93R6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MettingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -672,6 +760,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E48905172CE33573003F566A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E489051A2CE3366C003F566A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E48905172CE33573003F566A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E48904C62CE32618003F566A /* Project object */;
 }
