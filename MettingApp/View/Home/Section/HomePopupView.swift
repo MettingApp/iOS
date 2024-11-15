@@ -40,6 +40,7 @@ struct HomePopupView: View {
                     .foregroundColor(.gray)
             }
             .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
             
             TextField("초대코드를 입력해 주세요", text: $viewModel.codeText)
                 .overlay(alignment: .trailing) {
@@ -57,6 +58,7 @@ struct HomePopupView: View {
                     //TODO: - 입력
                     focusState = false
                 }
+                .padding(.bottom, 20)
                 .padding(.horizontal, 30)
         }
         .padding(.vertical, 20)
@@ -65,7 +67,7 @@ struct HomePopupView: View {
         }
         .background(.white)
         .cornerRadius(15)
-        .frame(width: UIScreen.main.bounds.width - 60, height: UIScreen.main.bounds.height / 2.5)
+        .frame(width: UIScreen.main.bounds.width - 60)
     }
 }
 

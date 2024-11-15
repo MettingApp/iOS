@@ -43,16 +43,19 @@ struct HomeView: View {
     }
     
     var loadedView: some View {
-        ScrollView(.vertical) {
-            VStack(alignment: .center, spacing: 20) {
-                header
-                
-                middle
-                
-                SeperateView()
-                    .frame(width: UIScreen.main.bounds.width, height: 20)
-                
-                footer
+        NavigationStack {
+            ScrollView(.vertical) {
+                VStack(alignment: .center, spacing: 20) {
+                    header
+                    
+                    middle
+                    
+                    SeperateView()
+                        .frame(width: UIScreen.main.bounds.width, height: 20)
+                    
+                    footer
+                }
+                .padding(.vertical, 30)
             }
         }
     }
@@ -108,14 +111,11 @@ struct HomeView: View {
             }
         }
         .padding(.horizontal, 30)
-        .padding(.vertical, 30)
     }
     
     var middle: some View {
         VStack(alignment: .leading, spacing: 30) {
-            Button {
-                //TODO: - 새로운 조직 만들기
-            } label: {
+            NavigationLink(destination: OrganazationCreateView(viewModel: .init(container: .init(services: Services())))) {
                 HStack {
                     Text("새로운 조직 만들기")
                         .font(.system(size: 17, weight: .bold))

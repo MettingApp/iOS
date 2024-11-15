@@ -45,9 +45,12 @@ struct OrganazationViewCell: View {
             }
             .padding(.horizontal, 10)
         }
-        .padding(10)
-        .background(RoundedRectangle(cornerRadius: 15).fill(.white).shadow(color: Color.pointColor, radius: 1))
+        .background(.white)
         .frame(width: UIScreen.main.bounds.width / 1.5, height: UIScreen.main.bounds.height / 6)
+        .padding(10)
+        .overlay {
+            RoundedRectangle(cornerRadius: 15).fill(.clear).stroke(Color.pointOpacity)
+        }
     }
 }
 

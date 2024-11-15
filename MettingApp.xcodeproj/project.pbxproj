@@ -30,6 +30,8 @@
 		E48905262CE3437F003F566A /* SeperateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905252CE3437F003F566A /* SeperateView.swift */; };
 		E48905282CE343F7003F566A /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905272CE343F7003F566A /* ScheduleModel.swift */; };
 		E489052A2CE346D7003F566A /* HomePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905292CE346D7003F566A /* HomePopupView.swift */; };
+		E489052C2CE721D9003F566A /* OrganazationCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052B2CE721D9003F566A /* OrganazationCreateView.swift */; };
+		E489052E2CE721F1003F566A /* OrganazationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052D2CE721F1003F566A /* OrganazationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		E48905252CE3437F003F566A /* SeperateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeperateView.swift; sourceTree = "<group>"; };
 		E48905272CE343F7003F566A /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		E48905292CE346D7003F566A /* HomePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopupView.swift; sourceTree = "<group>"; };
+		E489052B2CE721D9003F566A /* OrganazationCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationCreateView.swift; sourceTree = "<group>"; };
+		E489052D2CE721F1003F566A /* OrganazationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +255,8 @@
 		E489050E2CE32E64003F566A /* Organazation */ = {
 			isa = PBXGroup;
 			children = (
+				E489052B2CE721D9003F566A /* OrganazationCreateView.swift */,
+				E489052D2CE721F1003F566A /* OrganazationViewModel.swift */,
 			);
 			path = Organazation;
 			sourceTree = "<group>";
@@ -421,9 +427,11 @@
 				E48905242CE33DC5003F566A /* organazationModel.swift in Sources */,
 				E48905052CE3299B003F566A /* View + Extension.swift in Sources */,
 				E48905102CE32E7C003F566A /* HomeView.swift in Sources */,
+				E489052C2CE721D9003F566A /* OrganazationCreateView.swift in Sources */,
 				E489050C2CE32A9A003F566A /* Services.swift in Sources */,
 				E489052A2CE346D7003F566A /* HomePopupView.swift in Sources */,
 				E48905162CE3351E003F566A /* LoadingView.swift in Sources */,
+				E489052E2CE721F1003F566A /* OrganazationViewModel.swift in Sources */,
 				E48905212CE33A28003F566A /* OrganazationViewCell.swift in Sources */,
 				E48905122CE32EB5003F566A /* HomeViewModel.swift in Sources */,
 				E48905262CE3437F003F566A /* SeperateView.swift in Sources */,
