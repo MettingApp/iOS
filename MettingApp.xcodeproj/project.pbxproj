@@ -32,6 +32,7 @@
 		E489052A2CE346D7003F566A /* HomePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905292CE346D7003F566A /* HomePopupView.swift */; };
 		E489052C2CE721D9003F566A /* OrganazationCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052B2CE721D9003F566A /* OrganazationCreateView.swift */; };
 		E489052E2CE721F1003F566A /* OrganazationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052D2CE721F1003F566A /* OrganazationViewModel.swift */; };
+		E48905302CE75459003F566A /* OrganazationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052F2CE75459003F566A /* OrganazationList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		E48905292CE346D7003F566A /* HomePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopupView.swift; sourceTree = "<group>"; };
 		E489052B2CE721D9003F566A /* OrganazationCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationCreateView.swift; sourceTree = "<group>"; };
 		E489052D2CE721F1003F566A /* OrganazationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationViewModel.swift; sourceTree = "<group>"; };
+		E489052F2CE75459003F566A /* OrganazationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			children = (
 				E489052B2CE721D9003F566A /* OrganazationCreateView.swift */,
 				E489052D2CE721F1003F566A /* OrganazationViewModel.swift */,
+				E489052F2CE75459003F566A /* OrganazationList.swift */,
 			);
 			path = Organazation;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				E48905122CE32EB5003F566A /* HomeViewModel.swift in Sources */,
 				E48905262CE3437F003F566A /* SeperateView.swift in Sources */,
 				E48905282CE343F7003F566A /* ScheduleModel.swift in Sources */,
+				E48905302CE75459003F566A /* OrganazationList.swift in Sources */,
 				E48904D42CE32619003F566A /* SplashView.swift in Sources */,
 				E489050A2CE32A2C003F566A /* DIContainer.swift in Sources */,
 				E48904D22CE32619003F566A /* MettingAppApp.swift in Sources */,

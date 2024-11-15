@@ -135,11 +135,19 @@ struct HomeView: View {
             .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 3)
             .padding(.horizontal, 30)
             
-            Text("조직")
-                .foregroundColor(.primary)
-                .font(.system(size: 18, weight: .bold))
-                .padding(.horizontal, 30)
-                .padding(.bottom, -10)
+            HStack {
+                Text("조직")
+                    .foregroundColor(.primary)
+                    .font(.system(size: 18, weight: .bold))
+                    .padding(.bottom, -10)
+                Spacer()
+                NavigationLink(destination: OrganazationList(viewModel: .init(container: .init(services: Services())))) {
+                    Text("더보기 ▷")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(.gray)
+                }
+            }
+            .padding(.horizontal, 30)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
