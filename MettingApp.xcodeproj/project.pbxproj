@@ -33,6 +33,11 @@
 		E489052C2CE721D9003F566A /* OrganazationCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052B2CE721D9003F566A /* OrganazationCreateView.swift */; };
 		E489052E2CE721F1003F566A /* OrganazationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052D2CE721F1003F566A /* OrganazationViewModel.swift */; };
 		E48905302CE75459003F566A /* OrganazationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052F2CE75459003F566A /* OrganazationList.swift */; };
+		E48905422CEDD6D0003F566A /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = E48905412CEDD6D0003F566A /* FSCalendar */; };
+		E48905452CEDD6FA003F566A /* OrganazationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905442CEDD6FA003F566A /* OrganazationDetailView.swift */; };
+		E48905472CEDD704003F566A /* OrganazationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905462CEDD703003F566A /* OrganazationDetailViewModel.swift */; };
+		E48905492CEDD719003F566A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905482CEDD719003F566A /* CalendarView.swift */; };
+		E489054C2CEDD8BF003F566A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E489054B2CEDD8BF003F566A /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +87,9 @@
 		E489052B2CE721D9003F566A /* OrganazationCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationCreateView.swift; sourceTree = "<group>"; };
 		E489052D2CE721F1003F566A /* OrganazationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationViewModel.swift; sourceTree = "<group>"; };
 		E489052F2CE75459003F566A /* OrganazationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationList.swift; sourceTree = "<group>"; };
+		E48905442CEDD6FA003F566A /* OrganazationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationDetailView.swift; sourceTree = "<group>"; };
+		E48905462CEDD703003F566A /* OrganazationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationDetailViewModel.swift; sourceTree = "<group>"; };
+		E48905482CEDD719003F566A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +97,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E489054C2CEDD8BF003F566A /* SnapKit in Frameworks */,
 				E489051B2CE3366C003F566A /* Kingfisher in Frameworks */,
+				E48905422CEDD6D0003F566A /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +199,7 @@
 			children = (
 				E48905152CE3351E003F566A /* LoadingView.swift */,
 				E48905252CE3437F003F566A /* SeperateView.swift */,
+				E48905482CEDD719003F566A /* CalendarView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -257,6 +268,7 @@
 		E489050E2CE32E64003F566A /* Organazation */ = {
 			isa = PBXGroup;
 			children = (
+				E48905432CEDD6E7003F566A /* OrganazationDetail */,
 				E489052B2CE721D9003F566A /* OrganazationCreateView.swift */,
 				E489052D2CE721F1003F566A /* OrganazationViewModel.swift */,
 				E489052F2CE75459003F566A /* OrganazationList.swift */,
@@ -289,6 +301,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		E48905432CEDD6E7003F566A /* OrganazationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E48905442CEDD6FA003F566A /* OrganazationDetailView.swift */,
+				E48905462CEDD703003F566A /* OrganazationDetailViewModel.swift */,
+			);
+			path = OrganazationDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +328,8 @@
 			name = MettingApp;
 			packageProductDependencies = (
 				E489051A2CE3366C003F566A /* Kingfisher */,
+				E48905412CEDD6D0003F566A /* FSCalendar */,
+				E489054B2CEDD8BF003F566A /* SnapKit */,
 			);
 			productName = MettingApp;
 			productReference = E48904CE2CE32619003F566A /* MettingApp.app */;
@@ -382,6 +405,8 @@
 			mainGroup = E48904C52CE32618003F566A;
 			packageReferences = (
 				E48905172CE33573003F566A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E48905402CEDD6BB003F566A /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				E489054A2CEDD8B6003F566A /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = E48904CF2CE32619003F566A /* Products */;
 			projectDirPath = "";
@@ -431,11 +456,14 @@
 				E48905052CE3299B003F566A /* View + Extension.swift in Sources */,
 				E48905102CE32E7C003F566A /* HomeView.swift in Sources */,
 				E489052C2CE721D9003F566A /* OrganazationCreateView.swift in Sources */,
+				E48905472CEDD704003F566A /* OrganazationDetailViewModel.swift in Sources */,
 				E489050C2CE32A9A003F566A /* Services.swift in Sources */,
 				E489052A2CE346D7003F566A /* HomePopupView.swift in Sources */,
 				E48905162CE3351E003F566A /* LoadingView.swift in Sources */,
+				E48905492CEDD719003F566A /* CalendarView.swift in Sources */,
 				E489052E2CE721F1003F566A /* OrganazationViewModel.swift in Sources */,
 				E48905212CE33A28003F566A /* OrganazationViewCell.swift in Sources */,
+				E48905452CEDD6FA003F566A /* OrganazationDetailView.swift in Sources */,
 				E48905122CE32EB5003F566A /* HomeViewModel.swift in Sources */,
 				E48905262CE3437F003F566A /* SeperateView.swift in Sources */,
 				E48905282CE343F7003F566A /* ScheduleModel.swift in Sources */,
@@ -615,8 +643,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,6 +652,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = WEDLE.MettingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,8 +676,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,6 +685,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = WEDLE.MettingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -786,6 +820,22 @@
 				minimumVersion = 8.1.0;
 			};
 		};
+		E48905402CEDD6BB003F566A /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		E489054A2CEDD8B6003F566A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -793,6 +843,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E48905172CE33573003F566A /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		E48905412CEDD6D0003F566A /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E48905402CEDD6BB003F566A /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		E489054B2CEDD8BF003F566A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E489054A2CEDD8B6003F566A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

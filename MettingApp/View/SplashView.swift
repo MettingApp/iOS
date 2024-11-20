@@ -35,14 +35,14 @@ struct SplashView: View {
             Spacer()
             Text("MOTE")
                 .font(.system(size: 50, weight: .heavy))
-                .foregroundColor(.pointColor)
+                .foregroundColor(.pointOriginColor)
             Spacer()
             Group {
                 Text("Team ")
                     .foregroundColor(.gray)
                 +
                 Text("미나리무침")
-                    .foregroundColor(.pointColor)
+                    .foregroundColor(.pointOriginColor)
             }
             .font(.system(size: 15, weight: .bold))
             .padding(.bottom, 30)

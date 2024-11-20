@@ -29,12 +29,12 @@ struct HomePopupView: View {
             
             Image(systemName: "star.fill")
                 .font(.system(size: 50))
-                .foregroundColor(Color.pointColor)
+                .foregroundColor(Color.pointOriginColor)
                 
             VStack(alignment: .center, spacing: 3) {
                 Text("초대코드 입력하기!")
                     .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(.pointColor)
+                    .foregroundColor(.pointOriginColor)
                 Text("초대코드를 입력하면💬, \n새로운 조직에 들어갈 수 있어요!")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(.gray)

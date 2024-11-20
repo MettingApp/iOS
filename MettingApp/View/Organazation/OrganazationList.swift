@@ -78,7 +78,7 @@ struct OrganazationList: View {
                 }
                 .frame(height: 50)
                 .padding(10)
-                .background(RoundedRectangle(cornerRadius: 15).fill(Color.pointColor))
+                .background(RoundedRectangle(cornerRadius: 15).fill(Color.pointOriginColor))
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 3)
                 
                 Spacer()

@@ -63,7 +63,7 @@ struct OrganazationCreateView: View {
                         Text("저장 한 후에는 수정이 불가합니다")
                             .font(.system(size: 12, weight: .semibold))
                     }
-                    .foregroundColor(.pointColor)
+                    .foregroundColor(.pointOriginColor)
                 }
             }
             .padding(.horizontal, 30)

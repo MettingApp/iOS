@@ -67,7 +67,7 @@ struct HomeView: View {
                     .fill(.black)
                     .frame(width: 30, height: 30)
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("안녕하세요, ").foregroundColor(.primary) + Text("정곤님!").foregroundColor(.pointColor)
+                    Text("안녕하세요, ").foregroundColor(.primary) + Text("정곤님!").foregroundColor(.pointOriginColor)
                     Text("MOTE")
                         .font(.system(size: 18, weight: .heavy))
                         .foregroundColor(.primary)
@@ -103,7 +103,7 @@ struct HomeView: View {
                         Text("남았습니다!")
                             .font(.system(size: 18, weight: .regular))
                     }
-                    .foregroundColor(.pointColor)
+                    .foregroundColor(.pointOriginColor)
                 }
                 Spacer()
                 LoadingView(url: "bell", size: [130, 130])
@@ -131,7 +131,7 @@ struct HomeView: View {
             }
             .frame(height: 50)
             .padding(10)
-            .background(RoundedRectangle(cornerRadius: 15).fill(Color.pointColor))
+            .background(RoundedRectangle(cornerRadius: 15).fill(Color.pointOriginColor))
             .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 3)
             .padding(.horizontal, 30)
             
@@ -169,18 +169,18 @@ struct HomeView: View {
             
             ProgressView(value: 30, total: 100)
                 .progressViewStyle(.linear)
-                .tint(.pointColor)
+                .tint(.pointOriginColor)
                 .overlay(alignment: .topTrailing) {
                     Text("30%")
                         .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(.pointColor)
+                        .foregroundColor(.pointOriginColor)
                         .padding(.top, -20)
                 }
                 
             ForEach(viewModel.scheduleData.indices, id:\.self) { index in
                 HStack(spacing: 20) {
                     Circle()
-                        .fill(Color.pointColor)
+                        .fill(Color.pointOriginColor)
                         .frame(width: 20, height: 20)
                         .overlay(alignment: .center) {
                             Text("\(index + 1)")
