@@ -10,6 +10,7 @@ import SwiftUI
 struct OrganazationDetailView: View {
     @StateObject var viewModel: OrganazationDetailViewModel
     @State private var selectedData: [CalendarModel] = .init()
+    @State private var isRecord: Bool = false
     @Environment(\.dismiss) var dismiss
     
     var color: [Color] = [.red.opacity(0.5), .orange.opacity(0.5), .green.opacity(0.5), .blue.opacity(0.5), .yellow.opacity(0.5), .pink.opacity(0.5)]
@@ -32,6 +33,10 @@ struct OrganazationDetailView: View {
                         }
                     }
                 }
+            }
+            .fullScreenCover(isPresented: $isRecord) {
+                RecordingView(viewModel: .init(container: .init(services: Services())), isPresented: $isRecord)
+                    .presentationBackground(.black.opacity(0.7))
             }
     }
     
@@ -92,7 +97,7 @@ struct OrganazationDetailView: View {
                 HStack {
                     Spacer()
                     Button {
-                        //TODO: - 녹음
+                        isRecord = true
                     } label: {
                         Image(systemName: "mic")
                             .foregroundColor(.white)
@@ -157,6 +162,8 @@ fileprivate struct MarkdownView: View {
     var body: some View {
         VStack {
             Text(descriptions)
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundColor(.black.opacity(0.7))
         }
     }
 }

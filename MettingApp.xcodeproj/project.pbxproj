@@ -38,6 +38,8 @@
 		E48905472CEDD704003F566A /* OrganazationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905462CEDD703003F566A /* OrganazationDetailViewModel.swift */; };
 		E48905492CEDD719003F566A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905482CEDD719003F566A /* CalendarView.swift */; };
 		E489054C2CEDD8BF003F566A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E489054B2CEDD8BF003F566A /* SnapKit */; };
+		E48905522CEF2641003F566A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905512CEF2641003F566A /* RecordingView.swift */; };
+		E48905552CEF276A003F566A /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905542CEF276A003F566A /* RecordingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		E48905442CEDD6FA003F566A /* OrganazationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationDetailView.swift; sourceTree = "<group>"; };
 		E48905462CEDD703003F566A /* OrganazationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationDetailViewModel.swift; sourceTree = "<group>"; };
 		E48905482CEDD719003F566A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		E48905512CEF2641003F566A /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		E48905542CEF276A003F566A /* RecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 		E48904FB2CE3267E003F566A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E48905532CEF275D003F566A /* Recording */,
 				E489050E2CE32E64003F566A /* Organazation */,
 				E489050D2CE32E59003F566A /* Home */,
 				E48904D32CE32619003F566A /* SplashView.swift */,
@@ -308,6 +313,23 @@
 				E48905462CEDD703003F566A /* OrganazationDetailViewModel.swift */,
 			);
 			path = OrganazationDetail;
+			sourceTree = "<group>";
+		};
+		E48905532CEF275D003F566A /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				E48905562CEF4996003F566A /* Plus */,
+				E48905512CEF2641003F566A /* RecordingView.swift */,
+				E48905542CEF276A003F566A /* RecordingViewModel.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		E48905562CEF4996003F566A /* Plus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +480,7 @@
 				E489052C2CE721D9003F566A /* OrganazationCreateView.swift in Sources */,
 				E48905472CEDD704003F566A /* OrganazationDetailViewModel.swift in Sources */,
 				E489050C2CE32A9A003F566A /* Services.swift in Sources */,
+				E48905552CEF276A003F566A /* RecordingViewModel.swift in Sources */,
 				E489052A2CE346D7003F566A /* HomePopupView.swift in Sources */,
 				E48905162CE3351E003F566A /* LoadingView.swift in Sources */,
 				E48905492CEDD719003F566A /* CalendarView.swift in Sources */,
@@ -470,6 +493,7 @@
 				E48905302CE75459003F566A /* OrganazationList.swift in Sources */,
 				E48904D42CE32619003F566A /* SplashView.swift in Sources */,
 				E489050A2CE32A2C003F566A /* DIContainer.swift in Sources */,
+				E48905522CEF2641003F566A /* RecordingView.swift in Sources */,
 				E48904D22CE32619003F566A /* MettingAppApp.swift in Sources */,
 				E48905022CE32814003F566A /* Color + Extension.swift in Sources */,
 				E48905142CE32ED5003F566A /* Phase.swift in Sources */,
