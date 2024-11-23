@@ -24,7 +24,6 @@
 		E48905142CE32ED5003F566A /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905132CE32ED5003F566A /* Phase.swift */; };
 		E48905162CE3351E003F566A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905152CE3351E003F566A /* LoadingView.swift */; };
 		E489051B2CE3366C003F566A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E489051A2CE3366C003F566A /* Kingfisher */; };
-		E489051D2CE33697003F566A /* bell.gif in Resources */ = {isa = PBXBuildFile; fileRef = E489051C2CE33697003F566A /* bell.gif */; };
 		E48905212CE33A28003F566A /* OrganazationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905202CE33A28003F566A /* OrganazationViewCell.swift */; };
 		E48905242CE33DC5003F566A /* organazationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905232CE33DC5003F566A /* organazationModel.swift */; };
 		E48905262CE3437F003F566A /* SeperateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905252CE3437F003F566A /* SeperateView.swift */; };
@@ -40,6 +39,14 @@
 		E489054C2CEDD8BF003F566A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E489054B2CEDD8BF003F566A /* SnapKit */; };
 		E48905522CEF2641003F566A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905512CEF2641003F566A /* RecordingView.swift */; };
 		E48905552CEF276A003F566A /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905542CEF276A003F566A /* RecordingViewModel.swift */; };
+		E4F3219D2CF1A96F00D35702 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F3219C2CF1A96F00D35702 /* Alamofire.swift */; };
+		E4F321A02CF1A98900D35702 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4F3219F2CF1A98900D35702 /* Alamofire */; };
+		E4F321A22CF1A9AB00D35702 /* RequestInterceptor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321A12CF1A9AB00D35702 /* RequestInterceptor + Extension.swift */; };
+		E4F321A52CF1A9D700D35702 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = E4F321A42CF1A9D700D35702 /* SwiftKeychainWrapper */; };
+		E4F321A72CF1A9F800D35702 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321A62CF1A9F800D35702 /* UserModel.swift */; };
+		E4F321A92CF1AA2000D35702 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */; };
+		E4F321AB2CF1AC2A00D35702 /* bell.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4F321AA2CF1AC2A00D35702 /* bell.gif */; };
+		E4F321AE2CF1AE0900D35702 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4F321AD2CF1AE0800D35702 /* loading.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +87,6 @@
 		E48905132CE32ED5003F566A /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
 		E48905152CE3351E003F566A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		E48905182CE33667003F566A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E489051C2CE33697003F566A /* bell.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bell.gif; sourceTree = "<group>"; };
 		E48905202CE33A28003F566A /* OrganazationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationViewCell.swift; sourceTree = "<group>"; };
 		E48905232CE33DC5003F566A /* organazationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = organazationModel.swift; sourceTree = "<group>"; };
 		E48905252CE3437F003F566A /* SeperateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeperateView.swift; sourceTree = "<group>"; };
@@ -94,6 +100,12 @@
 		E48905482CEDD719003F566A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		E48905512CEF2641003F566A /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		E48905542CEF276A003F566A /* RecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewModel.swift; sourceTree = "<group>"; };
+		E4F3219C2CF1A96F00D35702 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		E4F321A12CF1A9AB00D35702 /* RequestInterceptor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestInterceptor + Extension.swift"; sourceTree = "<group>"; };
+		E4F321A62CF1A9F800D35702 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		E4F321AA2CF1AC2A00D35702 /* bell.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bell.gif; sourceTree = "<group>"; };
+		E4F321AD2CF1AE0800D35702 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E489054C2CEDD8BF003F566A /* SnapKit in Frameworks */,
+				E4F321A02CF1A98900D35702 /* Alamofire in Frameworks */,
+				E4F321A52CF1A9D700D35702 /* SwiftKeychainWrapper in Frameworks */,
 				E489051B2CE3366C003F566A /* Kingfisher in Frameworks */,
 				E48905422CEDD6D0003F566A /* FSCalendar in Frameworks */,
 			);
@@ -214,6 +228,7 @@
 			children = (
 				E48905012CE32814003F566A /* Color + Extension.swift */,
 				E48905042CE3299B003F566A /* View + Extension.swift */,
+				E4F321A12CF1A9AB00D35702 /* RequestInterceptor + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -222,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				E489050B2CE32A9A003F566A /* Services.swift */,
+				E4F3219C2CF1A96F00D35702 /* Alamofire.swift */,
+				E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -229,7 +246,7 @@
 		E48905032CE32975003F566A /* Reference */ = {
 			isa = PBXGroup;
 			children = (
-				E489051C2CE33697003F566A /* bell.gif */,
+				E4F321AC2CF1AC2D00D35702 /* Gif */,
 				E48904D52CE3261B003F566A /* Assets.xcassets */,
 				E48904FF2CE327E4003F566A /* Color.xcassets */,
 			);
@@ -241,6 +258,7 @@
 			children = (
 				E48905222CE33DBB003F566A /* Home */,
 				E48905132CE32ED5003F566A /* Phase.swift */,
+				E4F321A62CF1A9F800D35702 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +350,15 @@
 			path = Plus;
 			sourceTree = "<group>";
 		};
+		E4F321AC2CF1AC2D00D35702 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				E4F321AD2CF1AE0800D35702 /* loading.gif */,
+				E4F321AA2CF1AC2A00D35702 /* bell.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,6 +379,8 @@
 				E489051A2CE3366C003F566A /* Kingfisher */,
 				E48905412CEDD6D0003F566A /* FSCalendar */,
 				E489054B2CEDD8BF003F566A /* SnapKit */,
+				E4F3219F2CF1A98900D35702 /* Alamofire */,
+				E4F321A42CF1A9D700D35702 /* SwiftKeychainWrapper */,
 			);
 			productName = MettingApp;
 			productReference = E48904CE2CE32619003F566A /* MettingApp.app */;
@@ -429,6 +458,8 @@
 				E48905172CE33573003F566A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				E48905402CEDD6BB003F566A /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				E489054A2CEDD8B6003F566A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E4F3219E2CF1A98000D35702 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E4F321A32CF1A9CD00D35702 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			productRefGroup = E48904CF2CE32619003F566A /* Products */;
 			projectDirPath = "";
@@ -448,8 +479,9 @@
 			files = (
 				E48904D92CE3261B003F566A /* Preview Assets.xcassets in Resources */,
 				E48904D62CE3261B003F566A /* Assets.xcassets in Resources */,
+				E4F321AE2CF1AE0900D35702 /* loading.gif in Resources */,
 				E48905002CE327E4003F566A /* Color.xcassets in Resources */,
-				E489051D2CE33697003F566A /* bell.gif in Resources */,
+				E4F321AB2CF1AC2A00D35702 /* bell.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +514,9 @@
 				E489050C2CE32A9A003F566A /* Services.swift in Sources */,
 				E48905552CEF276A003F566A /* RecordingViewModel.swift in Sources */,
 				E489052A2CE346D7003F566A /* HomePopupView.swift in Sources */,
+				E4F321A22CF1A9AB00D35702 /* RequestInterceptor + Extension.swift in Sources */,
 				E48905162CE3351E003F566A /* LoadingView.swift in Sources */,
+				E4F321A92CF1AA2000D35702 /* APIEndpoint.swift in Sources */,
 				E48905492CEDD719003F566A /* CalendarView.swift in Sources */,
 				E489052E2CE721F1003F566A /* OrganazationViewModel.swift in Sources */,
 				E48905212CE33A28003F566A /* OrganazationViewCell.swift in Sources */,
@@ -491,7 +525,9 @@
 				E48905262CE3437F003F566A /* SeperateView.swift in Sources */,
 				E48905282CE343F7003F566A /* ScheduleModel.swift in Sources */,
 				E48905302CE75459003F566A /* OrganazationList.swift in Sources */,
+				E4F321A72CF1A9F800D35702 /* UserModel.swift in Sources */,
 				E48904D42CE32619003F566A /* SplashView.swift in Sources */,
+				E4F3219D2CF1A96F00D35702 /* Alamofire.swift in Sources */,
 				E489050A2CE32A2C003F566A /* DIContainer.swift in Sources */,
 				E48905522CEF2641003F566A /* RecordingView.swift in Sources */,
 				E48904D22CE32619003F566A /* MettingAppApp.swift in Sources */,
@@ -860,6 +896,22 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		E4F3219E2CF1A98000D35702 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+		E4F321A32CF1A9CD00D35702 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -877,6 +929,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E489054A2CEDD8B6003F566A /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		E4F3219F2CF1A98900D35702 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F3219E2CF1A98000D35702 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		E4F321A42CF1A9D700D35702 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F321A32CF1A9CD00D35702 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -12,44 +12,47 @@ struct OrganazationViewCell: View {
     var color: [Color] = [.red.opacity(0.5), .orange.opacity(0.5), .green.opacity(0.5), .blue.opacity(0.5), .yellow.opacity(0.5), .pink.opacity(0.5)]
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(model.title)
-                .foregroundColor(.primary)
-                .font(.system(size: 18, weight: .bold))
-                .padding(.horizontal, 10)
-            Text(model.subTitle)
-                .foregroundColor(.gray)
-                .font(.system(size: 15, weight: .semibold))
-                .padding(.horizontal, 10)
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(model.people.indices, id: \.self) { index in
-                        Circle()
-                            .fill(color[index % model.people.count])
-                            .frame(width: 30, height: 30)
-                            .overlay(alignment: .center) {
-                                Text(model.people[index])
-                                    .font(.system(size: 13, weight: .semibold))
-                            }
+        NavigationLink(destination: OrganazationDetailView(viewModel: .init(container: .init(services: Services())))) {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(model.title)
+                    .foregroundColor(.primary)
+                    .font(.system(size: 18, weight: .bold))
+                    .padding(.horizontal, 10)
+                Text(model.subTitle)
+                    .foregroundColor(.gray)
+                    .font(.system(size: 15, weight: .semibold))
+                    .padding(.horizontal, 10)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(model.people.indices, id: \.self) { index in
+                            Circle()
+                                .fill(color[index % model.people.count])
+                                .frame(width: 30, height: 30)
+                                .overlay(alignment: .center) {
+                                    Text(model.people[index])
+                                        .font(.system(size: 13, weight: .semibold))
+                                        .foregroundColor(.primary)
+                                }
+                        }
                     }
+                    .padding(.horizontal, 10)
+                }
+                
+                HStack {
+                    Spacer()
+                    Text(model.date)
+                        .foregroundColor(.gray)
+                        .font(.system(size: 12, weight: .semibold))
                 }
                 .padding(.horizontal, 10)
             }
-            
-            HStack {
-                Spacer()
-                Text(model.date)
-                    .foregroundColor(.gray)
-                    .font(.system(size: 12, weight: .semibold))
+            .background(.white)
+            .frame(width: UIScreen.main.bounds.width / 1.5, height: UIScreen.main.bounds.height / 6)
+            .padding(10)
+            .overlay {
+                RoundedRectangle(cornerRadius: 15).fill(.clear).stroke(Color.pointOpacity)
             }
-            .padding(.horizontal, 10)
-        }
-        .background(.white)
-        .frame(width: UIScreen.main.bounds.width / 1.5, height: UIScreen.main.bounds.height / 6)
-        .padding(10)
-        .overlay {
-            RoundedRectangle(cornerRadius: 15).fill(.clear).stroke(Color.pointOpacity)
         }
     }
 }
