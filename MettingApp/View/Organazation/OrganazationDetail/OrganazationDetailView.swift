@@ -37,8 +37,13 @@ struct OrganazationDetailView: View {
                 }
             }
             .fullScreenCover(isPresented: $isRecord) {
-                RecordingView(viewModel: .init(container: .init(services: Services())), isPresented: $isRecord)
+                RecordingView(viewModel: .init(container: .init(services: Services())), isPresented: $isRecord, id: organazationId)
                     .presentationBackground(.black.opacity(0.7))
+            }
+            .onChange(of: selectedData) {
+                if selectedData != [] {
+                    viewModel.send(.detailLoad(self.organazationId, self.selectedData[0].meetingId))
+                }
             }
     }
     
@@ -48,8 +53,8 @@ struct OrganazationDetailView: View {
         case .notRequested:
             Color.white
                 .onAppear {
-                    viewModel.send(.load(organazationId))
                     viewModel.send(.calendarLoad(organazationId))
+                    viewModel.send(.load(organazationId))
                 }
         case .loading:
             Color.white
@@ -57,6 +62,10 @@ struct OrganazationDetailView: View {
             Color.white
         case .success:
             loadedView
+                .refreshable {
+                    viewModel.send(.calendarLoad(organazationId))
+                    viewModel.send(.load(organazationId))
+                }
         }
     }
     

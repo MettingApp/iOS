@@ -12,7 +12,7 @@ import AVFoundation
 class RecordingViewModel: ObservableObject {
     
     enum Action {
-        case load
+        case load(Int, CreateMeetingRequest)
         case startRecording
         case stopRecording
     }
@@ -20,6 +20,7 @@ class RecordingViewModel: ObservableObject {
     @Published var phase: Phase = .notRequested
     @Published var isRecording: Bool = false
     @Published var soundLevel: CGFloat = 0.0
+    @Published var answer: CreateMeetingRequest = .init(date: "", extraContent: "", title: "", fileName: "", category: "", members: [""])
     
     private let container: DIContainer
     private var subscriptions = Set<AnyCancellable>()
@@ -32,19 +33,33 @@ class RecordingViewModel: ObservableObject {
     
     func send(_ action: Action) {
         switch action {
-        case .load:
+        case let .load(id, request):
             self.phase = .loading
-            self.phase = .success
-            let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-            let fileURL = directory.appendingPathComponent("recording.wav")
-            
-            guard FileManager.default.fileExists(atPath: fileURL.path) else {
-                print("파일이 존재하지 않습니다.")
-                self.phase = .error
+            guard let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+                print("디렉토리를 찾을 수 없습니다.")
                 return
             }
-            
-            //TODO: - 서버로 전송
+            let fileURL = directory.appendingPathComponent("recording.wav")
+            guard FileManager.default.fileExists(atPath: fileURL.path) else {
+                print("녹음 파일이 존재하지 않습니다.")
+                return
+            }
+            guard let fileData = try? Data(contentsOf: fileURL) else {
+                print("파일 데이터를 읽을 수 없습니다.")
+                return
+            }
+            self.answer.fileName = "\(fileURL)"
+            container.services.meetingService.createMeeting(id: id, fileData: fileData, request: request)
+                .sink { [weak self] completion in
+                    if case .failure = completion {
+                        self?.phase = .error
+                    }
+                } receiveValue: { [weak self] result in
+                    
+                    self?.phase = .success
+                }.store(in: &subscriptions)
+
+                
             
         case .startRecording:
             startRecording()
@@ -65,9 +80,9 @@ class RecordingViewModel: ObservableObject {
             
             let settings: [String: Any] = [
                 AVFormatIDKey: Int(kAudioFormatLinearPCM),
-                AVSampleRateKey: 44100.0,
+                AVSampleRateKey: 22050.0,
                 AVNumberOfChannelsKey: 1,
-                AVLinearPCMBitDepthKey: 16,
+                AVLinearPCMBitDepthKey: 8,
                 AVLinearPCMIsBigEndianKey: false,
                 AVLinearPCMIsFloatKey: false
             ]

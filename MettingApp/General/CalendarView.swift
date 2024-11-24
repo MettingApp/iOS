@@ -29,6 +29,7 @@ struct CalendarView: UIViewRepresentable {
     var calenderData: [CalendarResult]
     
     @Binding var selectedData: [CalendarResult]
+    @EnvironmentObject var viewModel: OrganazationDetailViewModel
     
     var groupedData: [Date: [CalendarResult]] {
         let dateFormatter = DateFormatter()
@@ -58,6 +59,7 @@ struct CalendarView: UIViewRepresentable {
         func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
             if let data = parent.groupedData[date] {
                 self.parent.selectedData = data
+                
             } else {
                 self.parent.selectedData = []
             }

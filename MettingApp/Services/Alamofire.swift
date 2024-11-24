@@ -166,19 +166,29 @@ final class Alamofire {
         .eraseToAnyPublisher()
     }
     
-    func multipartAlamofire<T: Decodable>(url: String, data: Data?) -> AnyPublisher<T, Error> {
+    func multipartAlamofire<T: Decodable>(url: String, fileData: Data?, request: CreateMeetingRequest) -> AnyPublisher<T, Error> {
         return Future<T, Error> { promise in
             AF.upload(multipartFormData: { multipartFormData in
-                if let fileData = data {
-                    multipartFormData.append(fileData, withName: "file", fileName: "file.wav", mimeType: "file/wav")
+                if let fileData = fileData {
+                    multipartFormData.append(fileData, withName: "file", fileName: "file.wav", mimeType: "audio/wav")
                 }
-            }, to: url, headers: ["Content-Type": "multipart/form-data", "Authorization": "Bearer <Your_Token_Here>"])
+                do {
+                    let jsonData = try JSONEncoder().encode(request)
+                    multipartFormData.append(jsonData, withName: "req", mimeType: "application/json")
+                } catch {
+                    promise(.failure(error))
+                    return
+                }
+            }, to: url, method: .post, headers: [
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZUEiLCJyb2xlIjoiUk9MRV9VU0VSIiwiZXhwIjoxNzMyNDQyNjk0fQ.COn2wgRO2A6FnKkVcS1HYL0Rja4b98_aU9eE_layztw"
+            ])
             .validate()
             .responseDecodable(of: T.self) { response in
+                print(response.debugDescription)
                 switch response.result {
-                case let .success(result):
+                case .success(let result):
                     promise(.success(result))
-                case let .failure(error):
+                case .failure(let error):
                     promise(.failure(error))
                 }
             }

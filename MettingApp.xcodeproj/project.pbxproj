@@ -52,6 +52,9 @@
 		E4F321B62CF2224A00D35702 /* CreateOrganazationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B52CF2224A00D35702 /* CreateOrganazationModel.swift */; };
 		E4F321B82CF2D8A300D35702 /* JoinOrganazationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B72CF2D8A300D35702 /* JoinOrganazationModel.swift */; };
 		E4F321BA2CF2E0BC00D35702 /* OrganazationiDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B92CF2E0BC00D35702 /* OrganazationiDetailModel.swift */; };
+		E4F321BC2CF2EA1B00D35702 /* MeetingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321BB2CF2EA1B00D35702 /* MeetingService.swift */; };
+		E4F321BF2CF2EDB000D35702 /* CreateMeetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321BE2CF2EDB000D35702 /* CreateMeetingModel.swift */; };
+		E4F321C12CF32C2400D35702 /* DetailMeetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321C02CF32C2400D35702 /* DetailMeetingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,9 @@
 		E4F321B52CF2224A00D35702 /* CreateOrganazationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrganazationModel.swift; sourceTree = "<group>"; };
 		E4F321B72CF2D8A300D35702 /* JoinOrganazationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinOrganazationModel.swift; sourceTree = "<group>"; };
 		E4F321B92CF2E0BC00D35702 /* OrganazationiDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationiDetailModel.swift; sourceTree = "<group>"; };
+		E4F321BB2CF2EA1B00D35702 /* MeetingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingService.swift; sourceTree = "<group>"; };
+		E4F321BE2CF2EDB000D35702 /* CreateMeetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetingModel.swift; sourceTree = "<group>"; };
+		E4F321C02CF32C2400D35702 /* DetailMeetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMeetingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +256,7 @@
 				E4F3219C2CF1A96F00D35702 /* Alamofire.swift */,
 				E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */,
 				E4F321B22CF221E300D35702 /* OrganazationService.swift */,
+				E4F321BB2CF2EA1B00D35702 /* MeetingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -267,6 +274,7 @@
 		E48905062CE329EA003F566A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4F321BD2CF2EDA500D35702 /* Meeting */,
 				E4F321B42CF2223C00D35702 /* Organazation */,
 				E48905222CE33DBB003F566A /* Home */,
 				E48905132CE32ED5003F566A /* Phase.swift */,
@@ -379,6 +387,15 @@
 				E4F321B92CF2E0BC00D35702 /* OrganazationiDetailModel.swift */,
 			);
 			path = Organazation;
+			sourceTree = "<group>";
+		};
+		E4F321BD2CF2EDA500D35702 /* Meeting */ = {
+			isa = PBXGroup;
+			children = (
+				E4F321BE2CF2EDB000D35702 /* CreateMeetingModel.swift */,
+				E4F321C02CF32C2400D35702 /* DetailMeetingModel.swift */,
+			);
+			path = Meeting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,14 +551,17 @@
 				E48905052CE3299B003F566A /* View + Extension.swift in Sources */,
 				E48905102CE32E7C003F566A /* HomeView.swift in Sources */,
 				E489052C2CE721D9003F566A /* OrganazationCreateView.swift in Sources */,
+				E4F321BF2CF2EDB000D35702 /* CreateMeetingModel.swift in Sources */,
 				E48905472CEDD704003F566A /* OrganazationDetailViewModel.swift in Sources */,
 				E489050C2CE32A9A003F566A /* Services.swift in Sources */,
 				E48905552CEF276A003F566A /* RecordingViewModel.swift in Sources */,
 				E489052A2CE346D7003F566A /* HomePopupView.swift in Sources */,
 				E4F321A22CF1A9AB00D35702 /* RequestInterceptor + Extension.swift in Sources */,
+				E4F321BC2CF2EA1B00D35702 /* MeetingService.swift in Sources */,
 				E48905162CE3351E003F566A /* LoadingView.swift in Sources */,
 				E4F321A92CF1AA2000D35702 /* APIEndpoint.swift in Sources */,
 				E48905492CEDD719003F566A /* CalendarView.swift in Sources */,
+				E4F321C12CF32C2400D35702 /* DetailMeetingModel.swift in Sources */,
 				E489052E2CE721F1003F566A /* OrganazationViewModel.swift in Sources */,
 				E48905212CE33A28003F566A /* OrganazationViewCell.swift in Sources */,
 				E48905452CEDD6FA003F566A /* OrganazationDetailView.swift in Sources */,

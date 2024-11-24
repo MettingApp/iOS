@@ -14,6 +14,8 @@ enum APIEndpoint: String, CaseIterable {
     case getDetailOrganazation
     case joinOrganazation
     case getCalendar
+    case createMeeting
+    case detailMeeting
     
     var urlString: String {
         switch self {
@@ -29,6 +31,10 @@ enum APIEndpoint: String, CaseIterable {
             return "http://43.200.40.86:8080/api/v1/team/join"
         case .getCalendar:
             return "http://43.200.40.86:8080/api/v1/meeting/"
+        case .createMeeting:
+            return "http://43.200.40.86:8080/api/v1/meeting/"
+        case .detailMeeting:
+            return "http://43.200.40.86:8080/api/v1/meeting/detail/"
         }
     }
 }

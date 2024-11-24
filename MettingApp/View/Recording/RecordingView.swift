@@ -12,6 +12,7 @@ struct RecordingView: View {
     @Binding var isPresented: Bool
     @State private var isSend: Bool = false
     
+    var id: Int
     var body: some View {
         ZStack {
             Image("recordingBackground")
@@ -33,10 +34,10 @@ struct RecordingView: View {
                 }
                 Spacer()
                 if !isSend {
-                    recordingView(isPresented: $isPresented, isSend: $isSend)
+                    recordingView(isPresented: $isPresented, isSend: $isSend, id: id)
                         .environmentObject(viewModel)
                 } else {
-                    recordToServerView(isPresented: $isPresented)
+                    recordToServerView(isPresented: $isPresented, id: id)
                         .environmentObject(viewModel)
                 }
             }
@@ -49,24 +50,87 @@ struct RecordingView: View {
 fileprivate struct recordToServerView: View {
     @EnvironmentObject var viewModel: RecordingViewModel
     @Binding var isPresented: Bool
-    
+    @State var isDescription: Bool = false
+    let questions: [String] = ["카테고리", "회의 제목", "내용 추가"]
+    var id: Int
+
     var body: some View {
-        VStack(alignment: .center, spacing: 20) {
-            Text("녹음된 내용으로\n회의 내용을 요약 중이에요!")
-                .font(.system(size: 25, weight: .bold))
-                .foregroundColor(.white)
-                .multilineTextAlignment(.leading)
-            Spacer()
-            LoadingView(url: "loading", size: [200, 200])
-            Spacer()
+        if isDescription {
+            VStack(alignment: .center, spacing: 20) {
+                Text("녹음된 내용으로\n회의 내용을 요약 중이에요!")
+                    .font(.system(size: 25, weight: .bold))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+                LoadingView(url: "loading", size: [200, 200])
+                Spacer()
+            }
+        } else {
+            ScrollView(.vertical) {
+                VStack(alignment: .center, spacing: 20) {
+                    ForEach(0..<3, id: \.self) { index in
+                        RecordingQuestionView(title: questions[index], text: index == 0 ? $viewModel.answer.category :
+                                                index == 1 ? $viewModel.answer.title :
+                                                $viewModel.answer.extraContent)
+                    }
+                    Spacer()
+                    Button {
+                        if (viewModel.answer.category != "") && (viewModel.answer.title != "") && (viewModel.answer.extraContent != "") {
+                            let date = Date()
+                            let formatter = DateFormatter()
+                            formatter.dateFormat = "yyyy-MM-dd"
+                            viewModel.answer.date = formatter.string(from: date)
+                            viewModel.answer.fileName = "file.wav"
+                            viewModel.answer.members = []
+                            viewModel.send(.load(id, viewModel.answer))
+                            self.isDescription = true
+                        }
+                    } label: {
+                        VStack(alignment: .center, spacing: 5) {
+                            Text("저장 및 다음")
+                                .font(.system(size: 15, weight: .bold))
+                            Text("저장 한 후에는 수정이 불가합니다")
+                                .font(.system(size: 12, weight: .semibold))
+                        }
+                        .foregroundColor((viewModel.answer.category != "") && (viewModel.answer.title != "") && (viewModel.answer.extraContent != "") ? .pointOriginColor : .gray)
+                    }
+                }
+                .padding(.horizontal, 30)
+                .padding(.vertical, 20)
+            }
         }
     }
 }
+
+fileprivate struct RecordingQuestionView: View {
+    var title: String
+    @Binding var text: String
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            Text(title)
+                .font(.system(size: 15, weight: .bold))
+                .foregroundColor(.primary)
+            
+            TextField("\(title)을 입력하세요!", text: $text)
+                .font(.system(size: 13, weight: .semibold))
+                .foregroundColor(.primary)
+                .lineSpacing(5)
+                .frame(height: title == "설명" ? 200 : 40)
+                .padding(10)
+                .background(RoundedRectangle(cornerRadius: 15).fill(.white)
+                    .shadow(color: .gray, radius: 2, x: 1, y: 1))
+                .multilineTextAlignment(.leading)
+        }
+    }
+}
+
 
 fileprivate struct recordingView: View {
     @EnvironmentObject var viewModel: RecordingViewModel
     @Binding var isPresented: Bool
     @Binding var isSend: Bool
+    
+    var id: Int
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             Circle()
@@ -136,6 +200,6 @@ fileprivate struct recordingView: View {
 struct RecordingView_Previews: PreviewProvider {
     static var previews: some View {
         @State var isP: Bool = true
-        RecordingView(viewModel: .init(container: .init(services: StubServices())), isPresented: $isP)
+        RecordingView(viewModel: .init(container: .init(services: StubServices())), isPresented: $isP, id: 1)
     }
 }

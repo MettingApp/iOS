@@ -13,11 +13,14 @@ class OrganazationDetailViewModel: ObservableObject {
     enum Action {
         case load(Int)
         case calendarLoad(Int)
+        case detailLoad(Int, Int)
     }
     
     @Published var phase: Phase = .notRequested
     @Published var calendarData: [CalendarResult] = []
     @Published var organazationData: OrganazationDetailResult = .init(name: "", title: "", description: "", members: [])
+    @Published var meetingData: String = ""
+    
     private let container: DIContainer
     private var subscriptiions = Set<AnyCancellable>()
     
@@ -40,15 +43,23 @@ class OrganazationDetailViewModel: ObservableObject {
                 }.store(in: &subscriptiions)
             
         case let .calendarLoad(id):
-            self.phase = .loading
             container.services.organazationService.getCalendar(id: id)
                 .sink { [weak self] completion in
                     if case .failure = completion {
-                        self?.phase = .error
+                        self?.calendarData = []
                     }
                 } receiveValue: { [weak self] result in
                     self?.calendarData = result.result
-                    self?.phase = .success
+                }.store(in: &subscriptiions)
+            
+        case let .detailLoad(id, meetingId):
+            container.services.meetingService.detailLoad(id: id, meetingId: meetingId)
+                .sink { [weak self] completion in
+                    if case .failure = completion {
+                        self?.meetingData = ""
+                    }
+                } receiveValue: { [weak self] result in
+                    self?.meetingData = ""
                 }.store(in: &subscriptiions)
         }
     }

@@ -24,7 +24,7 @@ final class TokenRequestInterceptor: RequestInterceptor {
 //            print("액세스 토큰 없음")
 //        }
         if urlRequest.headers["Authorization"] == nil {
-            urlRequest.setValue("Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZUEiLCJyb2xlIjoiUk9MRV9VU0VSIiwiZXhwIjoxNzMyNDI1NjM1fQ.6d19vqSlbEZwy52A30wv6PiG1hdxUX3GpYW5BZC5uVE", forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZUEiLCJyb2xlIjoiUk9MRV9VU0VSIiwiZXhwIjoxNzMyNDQyNjk0fQ.COn2wgRO2A6FnKkVcS1HYL0Rja4b98_aU9eE_layztw", forHTTPHeaderField: "Authorization")
         }
         completion(.success(urlRequest))
     }
