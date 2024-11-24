@@ -138,7 +138,7 @@ final class Alamofire {
             AF.request(url, method: .get, encoding: JSONEncoding.default, headers: ["Content-Type": "application/json"], interceptor: TokenRequestInterceptor())
                 .validate()
                 .responseDecodable(of: T.self) { response in
-//                    print(response.debugDescription)
+                    print(response.debugDescription)
                     switch response.result {
                     case let .success(result):
                         promise(.success(result))
@@ -162,6 +162,26 @@ final class Alamofire {
                         promise(.failure(error))
                     }
                 }
+        }
+        .eraseToAnyPublisher()
+    }
+    
+    func multipartAlamofire<T: Decodable>(url: String, data: Data?) -> AnyPublisher<T, Error> {
+        return Future<T, Error> { promise in
+            AF.upload(multipartFormData: { multipartFormData in
+                if let fileData = data {
+                    multipartFormData.append(fileData, withName: "file", fileName: "file.wav", mimeType: "file/wav")
+                }
+            }, to: url, headers: ["Content-Type": "multipart/form-data", "Authorization": "Bearer <Your_Token_Here>"])
+            .validate()
+            .responseDecodable(of: T.self) { response in
+                switch response.result {
+                case let .success(result):
+                    promise(.success(result))
+                case let .failure(error):
+                    promise(.failure(error))
+                }
+            }
         }
         .eraseToAnyPublisher()
     }

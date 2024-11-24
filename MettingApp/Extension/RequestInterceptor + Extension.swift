@@ -16,14 +16,16 @@ final class TokenRequestInterceptor: RequestInterceptor {
 
     public func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, any Error>) -> Void) {
         var urlRequest = urlRequest
-        if let accessToken = KeychainWrapper.standard.string(forKey: "JWTaccessToken") {
-            if urlRequest.headers["Authorization"] == nil {
-                urlRequest.setValue(accessToken, forHTTPHeaderField: "Authorization")
-            }
-        } else {
-            print("액세스 토큰 없음")
+//        if let accessToken = KeychainWrapper.standard.string(forKey: "JWTaccessToken") {
+//            if urlRequest.headers["Authorization"] == nil {
+//                urlRequest.setValue(accessToken, forHTTPHeaderField: "Authorization")
+//            }
+//        } else {
+//            print("액세스 토큰 없음")
+//        }
+        if urlRequest.headers["Authorization"] == nil {
+            urlRequest.setValue("Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZUEiLCJyb2xlIjoiUk9MRV9VU0VSIiwiZXhwIjoxNzMyNDI1NjM1fQ.6d19vqSlbEZwy52A30wv6PiG1hdxUX3GpYW5BZC5uVE", forHTTPHeaderField: "Authorization")
         }
-
         completion(.success(urlRequest))
     }
 

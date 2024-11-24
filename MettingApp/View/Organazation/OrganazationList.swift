@@ -106,42 +106,34 @@ struct OrganazationList: View {
 }
 
 fileprivate struct OrganazationListCell: View {
-    var model: OrganazationModel
+    var model: OrganazationContent
     var color: [Color] = [.red.opacity(0.5), .orange.opacity(0.5), .green.opacity(0.5), .blue.opacity(0.5), .yellow.opacity(0.5), .pink.opacity(0.5)]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(model.title)
+            Text(model.name)
                 .foregroundColor(.primary)
                 .font(.system(size: 18, weight: .bold))
                 .padding(.horizontal, 10)
-            Text(model.subTitle)
+            Text(model.title)
                 .foregroundColor(.gray)
                 .font(.system(size: 15, weight: .semibold))
                 .padding(.horizontal, 10)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(model.people.indices, id: \.self) { index in
+                    ForEach(model.members.indices, id: \.self) { index in
                         Circle()
-                            .fill(color[index % model.people.count])
+                            .fill(color[index % model.members.count])
                             .frame(width: 30, height: 30)
                             .overlay(alignment: .center) {
-                                Text(model.people[index])
+                                Text(model.members[index])
                                     .font(.system(size: 13, weight: .semibold))
                             }
                     }
                 }
                 .padding(.horizontal, 10)
             }
-            
-            HStack {
-                Spacer()
-                Text(model.date)
-                    .foregroundColor(.gray)
-                    .font(.system(size: 12, weight: .semibold))
-            }
-            .padding(.horizontal, 10)
         }
         .background(.white)
         .frame(height: UIScreen.main.bounds.height / 6)

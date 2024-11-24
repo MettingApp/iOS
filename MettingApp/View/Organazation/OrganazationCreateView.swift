@@ -12,7 +12,7 @@ struct OrganazationCreateView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        loadedView
+        contentView
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -25,19 +25,38 @@ struct OrganazationCreateView: View {
                     }
                 }
             }
+            .alert(isPresented: $viewModel.isPresented) {
+                Alert(title: Text(viewModel.alertText), message: nil, primaryButton: .default(Text("확인"), action: {
+                    if viewModel.phase == .success {
+                        dismiss()
+                    }
+                }), secondaryButton: .default(Text("복사"), action: {
+                    let codeToCopy = viewModel.inviteCode
+                        UIPasteboard.general.string = codeToCopy
+                        if let copiedString = UIPasteboard.general.string {
+                            print("클립보드에 복사된 값: \(copiedString)")
+                        } else {
+                            print("복사 실패")
+                        }
+                    if viewModel.phase == .success {
+                        dismiss()
+                    }
+                }))
+            }
     }
     
     @ViewBuilder
     var contentView: some View {
         switch viewModel.phase {
         case .notRequested:
-            Color.white
+            loadedView
         case .loading:
-            LoadingView(url: "", size: [150,150])
+            LoadingView(url: "", size: [100,100])
         case .error:
-            Color.white
+            loadedView
         case .success:
             loadedView
+                
         }
     }
     
@@ -55,7 +74,9 @@ struct OrganazationCreateView: View {
                 }
                 Spacer()
                 Button {
-                    
+                    if (viewModel.organazation.title != "") && (viewModel.organazation.description != "") && (viewModel.organazation.subTitle != "") {
+                        viewModel.send(.createOrganazation(viewModel.organazation))
+                    }
                 } label: {
                     VStack(alignment: .center, spacing: 5) {
                         Text("저장 및 다음")
@@ -63,7 +84,7 @@ struct OrganazationCreateView: View {
                         Text("저장 한 후에는 수정이 불가합니다")
                             .font(.system(size: 12, weight: .semibold))
                     }
-                    .foregroundColor(.pointOriginColor)
+                    .foregroundColor((viewModel.organazation.title != "") && (viewModel.organazation.description != "") && (viewModel.organazation.subTitle != "") ? .pointOriginColor : .gray)
                 }
             }
             .padding(.horizontal, 30)

@@ -47,6 +47,11 @@
 		E4F321A92CF1AA2000D35702 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */; };
 		E4F321AB2CF1AC2A00D35702 /* bell.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4F321AA2CF1AC2A00D35702 /* bell.gif */; };
 		E4F321AE2CF1AE0900D35702 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4F321AD2CF1AE0800D35702 /* loading.gif */; };
+		E4F321B12CF21C4B00D35702 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = E4F321B02CF21C4B00D35702 /* MarkdownUI */; };
+		E4F321B32CF221E300D35702 /* OrganazationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B22CF221E300D35702 /* OrganazationService.swift */; };
+		E4F321B62CF2224A00D35702 /* CreateOrganazationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B52CF2224A00D35702 /* CreateOrganazationModel.swift */; };
+		E4F321B82CF2D8A300D35702 /* JoinOrganazationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B72CF2D8A300D35702 /* JoinOrganazationModel.swift */; };
+		E4F321BA2CF2E0BC00D35702 /* OrganazationiDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B92CF2E0BC00D35702 /* OrganazationiDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +111,10 @@
 		E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		E4F321AA2CF1AC2A00D35702 /* bell.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bell.gif; sourceTree = "<group>"; };
 		E4F321AD2CF1AE0800D35702 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		E4F321B22CF221E300D35702 /* OrganazationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationService.swift; sourceTree = "<group>"; };
+		E4F321B52CF2224A00D35702 /* CreateOrganazationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrganazationModel.swift; sourceTree = "<group>"; };
+		E4F321B72CF2D8A300D35702 /* JoinOrganazationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinOrganazationModel.swift; sourceTree = "<group>"; };
+		E4F321B92CF2E0BC00D35702 /* OrganazationiDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationiDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +125,7 @@
 				E489054C2CEDD8BF003F566A /* SnapKit in Frameworks */,
 				E4F321A02CF1A98900D35702 /* Alamofire in Frameworks */,
 				E4F321A52CF1A9D700D35702 /* SwiftKeychainWrapper in Frameworks */,
+				E4F321B12CF21C4B00D35702 /* MarkdownUI in Frameworks */,
 				E489051B2CE3366C003F566A /* Kingfisher in Frameworks */,
 				E48905422CEDD6D0003F566A /* FSCalendar in Frameworks */,
 			);
@@ -239,6 +249,7 @@
 				E489050B2CE32A9A003F566A /* Services.swift */,
 				E4F3219C2CF1A96F00D35702 /* Alamofire.swift */,
 				E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */,
+				E4F321B22CF221E300D35702 /* OrganazationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -256,6 +267,7 @@
 		E48905062CE329EA003F566A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4F321B42CF2223C00D35702 /* Organazation */,
 				E48905222CE33DBB003F566A /* Home */,
 				E48905132CE32ED5003F566A /* Phase.swift */,
 				E4F321A62CF1A9F800D35702 /* UserModel.swift */,
@@ -359,6 +371,16 @@
 			path = Gif;
 			sourceTree = "<group>";
 		};
+		E4F321B42CF2223C00D35702 /* Organazation */ = {
+			isa = PBXGroup;
+			children = (
+				E4F321B52CF2224A00D35702 /* CreateOrganazationModel.swift */,
+				E4F321B72CF2D8A300D35702 /* JoinOrganazationModel.swift */,
+				E4F321B92CF2E0BC00D35702 /* OrganazationiDetailModel.swift */,
+			);
+			path = Organazation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -381,6 +403,7 @@
 				E489054B2CEDD8BF003F566A /* SnapKit */,
 				E4F3219F2CF1A98900D35702 /* Alamofire */,
 				E4F321A42CF1A9D700D35702 /* SwiftKeychainWrapper */,
+				E4F321B02CF21C4B00D35702 /* MarkdownUI */,
 			);
 			productName = MettingApp;
 			productReference = E48904CE2CE32619003F566A /* MettingApp.app */;
@@ -460,6 +483,7 @@
 				E489054A2CEDD8B6003F566A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				E4F3219E2CF1A98000D35702 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E4F321A32CF1A9CD00D35702 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				E4F321AF2CF21C4200D35702 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
 			);
 			productRefGroup = E48904CF2CE32619003F566A /* Products */;
 			projectDirPath = "";
@@ -530,9 +554,13 @@
 				E4F3219D2CF1A96F00D35702 /* Alamofire.swift in Sources */,
 				E489050A2CE32A2C003F566A /* DIContainer.swift in Sources */,
 				E48905522CEF2641003F566A /* RecordingView.swift in Sources */,
+				E4F321B82CF2D8A300D35702 /* JoinOrganazationModel.swift in Sources */,
 				E48904D22CE32619003F566A /* MettingAppApp.swift in Sources */,
 				E48905022CE32814003F566A /* Color + Extension.swift in Sources */,
+				E4F321B32CF221E300D35702 /* OrganazationService.swift in Sources */,
 				E48905142CE32ED5003F566A /* Phase.swift in Sources */,
+				E4F321BA2CF2E0BC00D35702 /* OrganazationiDetailModel.swift in Sources */,
+				E4F321B62CF2224A00D35702 /* CreateOrganazationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,6 +940,14 @@
 				minimumVersion = 4.0.1;
 			};
 		};
+		E4F321AF2CF21C4200D35702 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -939,6 +975,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E4F321A32CF1A9CD00D35702 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
 			productName = SwiftKeychainWrapper;
+		};
+		E4F321B02CF21C4B00D35702 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F321AF2CF21C4200D35702 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

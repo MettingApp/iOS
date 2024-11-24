@@ -12,28 +12,32 @@ import FSCalendar
 import SnapKit
 
 struct CalendarModel: Codable, Hashable {
-    var calendarEventId: Int
-    var title: String
-    var date: String
-    var type: String
-    var notificationActive: Bool
-    var notificationId: Int?
+    var time: String
+    var status: Int
+    var code: String
+    var message: String
+    var result: [CalendarResult]
+}
+
+struct CalendarResult: Codable, Hashable {
+    var localDate: String
+    var meetingId: Int
 }
 
 struct CalendarView: UIViewRepresentable {
     typealias UIViewType = FSCalendar
-    var calenderData: [CalendarModel]
+    var calenderData: [CalendarResult]
     
-    @Binding var selectedData: [CalendarModel]
+    @Binding var selectedData: [CalendarResult]
     
-    var groupedData: [Date: [CalendarModel]] {
+    var groupedData: [Date: [CalendarResult]] {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
-        var grouped: [Date: [CalendarModel]] = [:]
+        var grouped: [Date: [CalendarResult]] = [:]
         
         for model in calenderData {
-            if let date = dateFormatter.date(from: model.date) {
+            if let date = dateFormatter.date(from: model.localDate) {
                 if grouped[date] != nil {
                     grouped[date]?.append(model)
                 } else {

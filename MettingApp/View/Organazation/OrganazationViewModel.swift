@@ -17,12 +17,15 @@ struct Organazation {
 class OrganazationViewModel: ObservableObject {
     
     enum Action {
-        case load
+        case createOrganazation(Organazation)
     }
 
     @Published var phase: Phase = .notRequested
+    @Published var isPresented: Bool = false
+    @Published var alertText: String = ""
+    @Published var inviteCode: String = ""
     @Published var organazation: Organazation = .init(title: "", subTitle: "", description: "")
-    @Published var organazationData: [OrganazationModel] = [OrganazationModel(title: "학술제 회의", subTitle: "1등 해보자!!", people: ["승진","정곤", "성윤", "규탁"], date: "2024년 11월 11일 생성"),OrganazationModel(title: "학술제 회의", subTitle: "1등 해보자!!", people: ["승진","정곤", "성윤", "규탁"], date: "2024년 11월 11일 생성"),OrganazationModel(title: "학술제 회의", subTitle: "1등 해보자!!", people: ["승진","정곤", "성윤", "규탁"], date: "2024년 11월 11일 생성"),OrganazationModel(title: "학술제 회의", subTitle: "1등 해보자!!", people: ["승진","정곤", "성윤", "규탁"], date: "2024년 11월 11일 생성")]
+    @Published var organazationData: [OrganazationContent] = []
     
     private let container: DIContainer
     private var subscriptions = Set<AnyCancellable>()
@@ -33,9 +36,22 @@ class OrganazationViewModel: ObservableObject {
     
     func send(_ action: Action) {
         switch action {
-        case .load:
+        case let .createOrganazation(organazation):
             phase = .loading
-            
+            container.services.organazationService.createOrganazation(organazation)
+                .sink { [weak self] completion in
+                    if case .failure = completion {
+                        self?.phase = .error
+                        self?.isPresented = true
+                        self?.alertText = "조직 생성 실패!"
+                    }
+                } receiveValue: { [weak self] result in
+                    self?.phase = .success
+                    self?.isPresented = true
+                    self?.inviteCode = result.result.inviteCode
+                    self?.alertText = "조직 생성 성공!\n초대 코드 : \(result.result.inviteCode)"
+                }.store(in: &subscriptions)
+
         }
     }
 }

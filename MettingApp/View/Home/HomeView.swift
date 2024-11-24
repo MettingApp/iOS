@@ -39,6 +39,7 @@ struct HomeView: View {
             Color.white
         case .success:
             loadedView
+                .refreshable { viewModel.send(.load) }
         }
     }
     

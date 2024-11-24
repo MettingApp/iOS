@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+import MarkdownUI
 
 struct OrganazationDetailView: View {
     @StateObject var viewModel: OrganazationDetailViewModel
-    @State private var selectedData: [CalendarModel] = .init()
+    @State private var selectedData: [CalendarResult] = []
     @State private var isRecord: Bool = false
     @Environment(\.dismiss) var dismiss
     
+    var organazationId: Int
     var color: [Color] = [.red.opacity(0.5), .orange.opacity(0.5), .green.opacity(0.5), .blue.opacity(0.5), .yellow.opacity(0.5), .pink.opacity(0.5)]
     
     var body: some View {
-        loadedView
+        contentView
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -27,8 +29,8 @@ struct OrganazationDetailView: View {
                             Image(systemName: "arrow.backward")
                                 .font(.system(size: 20))
                                 .tint(.black)
-                            Text("학술제 회의")
-                                .font(.system(size: 18, weight: .bold))
+                            Text(viewModel.organazationData.name)
+                                .font(.system(size: 20, weight: .bold))
                                 .foregroundColor(.primary)
                         }
                     }
@@ -46,7 +48,8 @@ struct OrganazationDetailView: View {
         case .notRequested:
             Color.white
                 .onAppear {
-                    
+                    viewModel.send(.load(organazationId))
+                    viewModel.send(.calendarLoad(organazationId))
                 }
         case .loading:
             Color.white
@@ -63,12 +66,12 @@ struct OrganazationDetailView: View {
                 VStack(alignment: .center, spacing: 20) {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(viewModel.people.indices, id: \.self) { index in
+                            ForEach(viewModel.organazationData.members.indices, id: \.self) { index in
                                 Circle()
-                                    .fill(color[index % viewModel.people.count])
+                                    .fill(color[index % viewModel.organazationData.members.count])
                                     .frame(width: 50, height: 50)
                                     .overlay(alignment: .center) {
-                                        Text(viewModel.people[index])
+                                        Text(viewModel.organazationData.members[index])
                                             .font(.system(size: 18, weight: .bold))
                                     }
                             }
@@ -85,7 +88,26 @@ struct OrganazationDetailView: View {
                     SeperateView()
                         .frame(width: UIScreen.main.bounds.width, height: 20)
                     
-                    MarkdownView(descriptions: "📅 2024년 11월 13일 회의 요약\n\n1. 프로젝트 진행 상황\n\n- UI 디자인: 메인 페이지 디자인 완료, 로그인 화면 수정 예정\n\n- 백엔드 개발: API 서버 배포 완료, 데이터베이스 최적화 진행 중\n\n- iOS 앱 개발: SwiftUI 기반으로 마크다운 뷰 기능 추가 예정")
+                    MarkdownView(descriptions: """
+                                    ## Topic Summary:
+                                    1. 홍보 및 일본의 자리에 대한 의혹
+                                       * **Summary**: 회의 참여자들이 홍보 및 일본의 자리에 대한 의혹에 대해 토론함
+                                       * **Result**: 홍보 및 의혹에 대한 논의가 계속될 것으로 보임
+                                       * **Search**: 홍보 및 의혹 관련 사례 연구
+                                    
+                                    2. 저씨의 주장과 의견 제시
+                                       * **Summary**: 저씨가 주장하고 의견을 제시하는 내용에 대한 토론
+                                       * **Result**: 저씨의 주장이 회의에 영향을 미칠 것으로 예상됨
+                                       * **Search**: 저씨의 주장에 대한 추가 정보
+                                    
+                                    3. 홍빛과 홍병에 대한 논의
+                                       * **Summary**: 홍빛과 홍병에 대한 토론 및 결론 도출
+                                       * **Result**: 홍빛과 홍병에 대한 조치가 필요함
+                                       * **Search**: 홍빛 및 홍병 관련 전략
+                                    
+                                    ## Next Meeting:
+                                    이번주 금요일 오후 2시
+                                    """)
                         .padding(.horizontal, 20)
                     
                 }
@@ -159,15 +181,12 @@ fileprivate struct RecommandSearch: View {
 
 fileprivate struct MarkdownView: View {
     var descriptions: String
+    
     var body: some View {
-        VStack {
-            Text(descriptions)
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundColor(.black.opacity(0.7))
-        }
+        Markdown(descriptions)
     }
 }
 
 #Preview {
-    OrganazationDetailView(viewModel: .init(container: .init(services: StubServices())))
+    OrganazationDetailView(viewModel: .init(container: .init(services: StubServices())), organazationId: 0)
 }
