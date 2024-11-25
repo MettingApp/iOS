@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import SwiftKeychainWrapper
 
 @main
 struct MettingAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }

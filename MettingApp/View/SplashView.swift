@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SplashView.swift
 //  MettingApp
 //
 //  Created by 정성윤 on 11/12/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SplashView: View {
     @State private var isSplash: Bool = false
     @State private var opacity: Bool = false
     var body: some View {
@@ -16,13 +16,17 @@ struct ContentView: View {
                 splash
                     .fadeInOut($opacity)
             } else {
-                
+                HomeView(viewModel: .init(container: .init(services: Services())))
             }
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 isSplash = true
             }
+        }
+        .navigationBarBackButtonHidden(true)
+        .onAppear {
+            UINavigationBar.appearance().backgroundColor = .clear
         }
     }
     
@@ -31,14 +35,14 @@ struct ContentView: View {
             Spacer()
             Text("MOTE")
                 .font(.system(size: 50, weight: .heavy))
-                .foregroundColor(.pointColor)
+                .foregroundColor(.pointOriginColor)
             Spacer()
             Group {
                 Text("Team ")
                     .foregroundColor(.gray)
                 +
                 Text("미나리무침")
-                    .foregroundColor(.pointColor)
+                    .foregroundColor(.pointOriginColor)
             }
             .font(.system(size: 15, weight: .bold))
             .padding(.bottom, 30)
@@ -47,5 +51,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    SplashView()
 }

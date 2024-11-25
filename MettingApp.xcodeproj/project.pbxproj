@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E48904D22CE32619003F566A /* MettingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48904D12CE32619003F566A /* MettingAppApp.swift */; };
-		E48904D42CE32619003F566A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48904D32CE32619003F566A /* ContentView.swift */; };
+		E48904D42CE32619003F566A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48904D32CE32619003F566A /* SplashView.swift */; };
 		E48904D62CE3261B003F566A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48904D52CE3261B003F566A /* Assets.xcassets */; };
 		E48904D92CE3261B003F566A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48904D82CE3261B003F566A /* Preview Assets.xcassets */; };
 		E48904E32CE3261C003F566A /* MettingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48904E22CE3261C003F566A /* MettingAppTests.swift */; };
@@ -19,6 +19,42 @@
 		E48905052CE3299B003F566A /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905042CE3299B003F566A /* View + Extension.swift */; };
 		E489050A2CE32A2C003F566A /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905092CE32A2C003F566A /* DIContainer.swift */; };
 		E489050C2CE32A9A003F566A /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489050B2CE32A9A003F566A /* Services.swift */; };
+		E48905102CE32E7C003F566A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489050F2CE32E7C003F566A /* HomeView.swift */; };
+		E48905122CE32EB5003F566A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905112CE32EB5003F566A /* HomeViewModel.swift */; };
+		E48905142CE32ED5003F566A /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905132CE32ED5003F566A /* Phase.swift */; };
+		E48905162CE3351E003F566A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905152CE3351E003F566A /* LoadingView.swift */; };
+		E489051B2CE3366C003F566A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E489051A2CE3366C003F566A /* Kingfisher */; };
+		E48905212CE33A28003F566A /* OrganazationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905202CE33A28003F566A /* OrganazationViewCell.swift */; };
+		E48905242CE33DC5003F566A /* organazationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905232CE33DC5003F566A /* organazationModel.swift */; };
+		E48905262CE3437F003F566A /* SeperateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905252CE3437F003F566A /* SeperateView.swift */; };
+		E48905282CE343F7003F566A /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905272CE343F7003F566A /* ScheduleModel.swift */; };
+		E489052A2CE346D7003F566A /* HomePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905292CE346D7003F566A /* HomePopupView.swift */; };
+		E489052C2CE721D9003F566A /* OrganazationCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052B2CE721D9003F566A /* OrganazationCreateView.swift */; };
+		E489052E2CE721F1003F566A /* OrganazationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052D2CE721F1003F566A /* OrganazationViewModel.swift */; };
+		E48905302CE75459003F566A /* OrganazationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489052F2CE75459003F566A /* OrganazationList.swift */; };
+		E48905422CEDD6D0003F566A /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = E48905412CEDD6D0003F566A /* FSCalendar */; };
+		E48905452CEDD6FA003F566A /* OrganazationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905442CEDD6FA003F566A /* OrganazationDetailView.swift */; };
+		E48905472CEDD704003F566A /* OrganazationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905462CEDD703003F566A /* OrganazationDetailViewModel.swift */; };
+		E48905492CEDD719003F566A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905482CEDD719003F566A /* CalendarView.swift */; };
+		E489054C2CEDD8BF003F566A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E489054B2CEDD8BF003F566A /* SnapKit */; };
+		E48905522CEF2641003F566A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905512CEF2641003F566A /* RecordingView.swift */; };
+		E48905552CEF276A003F566A /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48905542CEF276A003F566A /* RecordingViewModel.swift */; };
+		E4F3219D2CF1A96F00D35702 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F3219C2CF1A96F00D35702 /* Alamofire.swift */; };
+		E4F321A02CF1A98900D35702 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4F3219F2CF1A98900D35702 /* Alamofire */; };
+		E4F321A22CF1A9AB00D35702 /* RequestInterceptor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321A12CF1A9AB00D35702 /* RequestInterceptor + Extension.swift */; };
+		E4F321A52CF1A9D700D35702 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = E4F321A42CF1A9D700D35702 /* SwiftKeychainWrapper */; };
+		E4F321A72CF1A9F800D35702 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321A62CF1A9F800D35702 /* UserModel.swift */; };
+		E4F321A92CF1AA2000D35702 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */; };
+		E4F321AB2CF1AC2A00D35702 /* bell.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4F321AA2CF1AC2A00D35702 /* bell.gif */; };
+		E4F321AE2CF1AE0900D35702 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4F321AD2CF1AE0800D35702 /* loading.gif */; };
+		E4F321B12CF21C4B00D35702 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = E4F321B02CF21C4B00D35702 /* MarkdownUI */; };
+		E4F321B32CF221E300D35702 /* OrganazationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B22CF221E300D35702 /* OrganazationService.swift */; };
+		E4F321B62CF2224A00D35702 /* CreateOrganazationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B52CF2224A00D35702 /* CreateOrganazationModel.swift */; };
+		E4F321B82CF2D8A300D35702 /* JoinOrganazationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B72CF2D8A300D35702 /* JoinOrganazationModel.swift */; };
+		E4F321BA2CF2E0BC00D35702 /* OrganazationiDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321B92CF2E0BC00D35702 /* OrganazationiDetailModel.swift */; };
+		E4F321BC2CF2EA1B00D35702 /* MeetingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321BB2CF2EA1B00D35702 /* MeetingService.swift */; };
+		E4F321BF2CF2EDB000D35702 /* CreateMeetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321BE2CF2EDB000D35702 /* CreateMeetingModel.swift */; };
+		E4F321C12CF32C2400D35702 /* DetailMeetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F321C02CF32C2400D35702 /* DetailMeetingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +77,7 @@
 /* Begin PBXFileReference section */
 		E48904CE2CE32619003F566A /* MettingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MettingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48904D12CE32619003F566A /* MettingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MettingAppApp.swift; sourceTree = "<group>"; };
-		E48904D32CE32619003F566A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E48904D32CE32619003F566A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		E48904D52CE3261B003F566A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E48904D82CE3261B003F566A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E48904DE2CE3261C003F566A /* MettingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MettingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +90,37 @@
 		E48905042CE3299B003F566A /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
 		E48905092CE32A2C003F566A /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		E489050B2CE32A9A003F566A /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		E489050F2CE32E7C003F566A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E48905112CE32EB5003F566A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E48905132CE32ED5003F566A /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
+		E48905152CE3351E003F566A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E48905182CE33667003F566A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E48905202CE33A28003F566A /* OrganazationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationViewCell.swift; sourceTree = "<group>"; };
+		E48905232CE33DC5003F566A /* organazationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = organazationModel.swift; sourceTree = "<group>"; };
+		E48905252CE3437F003F566A /* SeperateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeperateView.swift; sourceTree = "<group>"; };
+		E48905272CE343F7003F566A /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		E48905292CE346D7003F566A /* HomePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopupView.swift; sourceTree = "<group>"; };
+		E489052B2CE721D9003F566A /* OrganazationCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationCreateView.swift; sourceTree = "<group>"; };
+		E489052D2CE721F1003F566A /* OrganazationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationViewModel.swift; sourceTree = "<group>"; };
+		E489052F2CE75459003F566A /* OrganazationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationList.swift; sourceTree = "<group>"; };
+		E48905442CEDD6FA003F566A /* OrganazationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationDetailView.swift; sourceTree = "<group>"; };
+		E48905462CEDD703003F566A /* OrganazationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationDetailViewModel.swift; sourceTree = "<group>"; };
+		E48905482CEDD719003F566A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		E48905512CEF2641003F566A /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		E48905542CEF276A003F566A /* RecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewModel.swift; sourceTree = "<group>"; };
+		E4F3219C2CF1A96F00D35702 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		E4F321A12CF1A9AB00D35702 /* RequestInterceptor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestInterceptor + Extension.swift"; sourceTree = "<group>"; };
+		E4F321A62CF1A9F800D35702 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		E4F321AA2CF1AC2A00D35702 /* bell.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bell.gif; sourceTree = "<group>"; };
+		E4F321AD2CF1AE0800D35702 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		E4F321B22CF221E300D35702 /* OrganazationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationService.swift; sourceTree = "<group>"; };
+		E4F321B52CF2224A00D35702 /* CreateOrganazationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrganazationModel.swift; sourceTree = "<group>"; };
+		E4F321B72CF2D8A300D35702 /* JoinOrganazationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinOrganazationModel.swift; sourceTree = "<group>"; };
+		E4F321B92CF2E0BC00D35702 /* OrganazationiDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganazationiDetailModel.swift; sourceTree = "<group>"; };
+		E4F321BB2CF2EA1B00D35702 /* MeetingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingService.swift; sourceTree = "<group>"; };
+		E4F321BE2CF2EDB000D35702 /* CreateMeetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetingModel.swift; sourceTree = "<group>"; };
+		E4F321C02CF32C2400D35702 /* DetailMeetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMeetingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +128,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E489054C2CEDD8BF003F566A /* SnapKit in Frameworks */,
+				E4F321A02CF1A98900D35702 /* Alamofire in Frameworks */,
+				E4F321A52CF1A9D700D35702 /* SwiftKeychainWrapper in Frameworks */,
+				E4F321B12CF21C4B00D35702 /* MarkdownUI in Frameworks */,
+				E489051B2CE3366C003F566A /* Kingfisher in Frameworks */,
+				E48905422CEDD6D0003F566A /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +161,7 @@
 				E48904E12CE3261C003F566A /* MettingAppTests */,
 				E48904EB2CE3261C003F566A /* MettingAppUITests */,
 				E48904CF2CE32619003F566A /* Products */,
+				E48905192CE3366C003F566A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +178,7 @@
 		E48904D02CE32619003F566A /* MettingApp */ = {
 			isa = PBXGroup;
 			children = (
+				E48905182CE33667003F566A /* Info.plist */,
 				E48904D12CE32619003F566A /* MettingAppApp.swift */,
 				E48905082CE32A15003F566A /* Provider */,
 				E48904FE2CE32693003F566A /* Services */,
@@ -146,7 +221,10 @@
 		E48904FB2CE3267E003F566A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E48904D32CE32619003F566A /* ContentView.swift */,
+				E48905532CEF275D003F566A /* Recording */,
+				E489050E2CE32E64003F566A /* Organazation */,
+				E489050D2CE32E59003F566A /* Home */,
+				E48904D32CE32619003F566A /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +232,9 @@
 		E48904FC2CE32684003F566A /* General */ = {
 			isa = PBXGroup;
 			children = (
+				E48905152CE3351E003F566A /* LoadingView.swift */,
+				E48905252CE3437F003F566A /* SeperateView.swift */,
+				E48905482CEDD719003F566A /* CalendarView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -163,6 +244,7 @@
 			children = (
 				E48905012CE32814003F566A /* Color + Extension.swift */,
 				E48905042CE3299B003F566A /* View + Extension.swift */,
+				E4F321A12CF1A9AB00D35702 /* RequestInterceptor + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -171,6 +253,10 @@
 			isa = PBXGroup;
 			children = (
 				E489050B2CE32A9A003F566A /* Services.swift */,
+				E4F3219C2CF1A96F00D35702 /* Alamofire.swift */,
+				E4F321A82CF1AA2000D35702 /* APIEndpoint.swift */,
+				E4F321B22CF221E300D35702 /* OrganazationService.swift */,
+				E4F321BB2CF2EA1B00D35702 /* MeetingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +264,7 @@
 		E48905032CE32975003F566A /* Reference */ = {
 			isa = PBXGroup;
 			children = (
+				E4F321AC2CF1AC2D00D35702 /* Gif */,
 				E48904D52CE3261B003F566A /* Assets.xcassets */,
 				E48904FF2CE327E4003F566A /* Color.xcassets */,
 			);
@@ -187,6 +274,11 @@
 		E48905062CE329EA003F566A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4F321BD2CF2EDA500D35702 /* Meeting */,
+				E4F321B42CF2223C00D35702 /* Organazation */,
+				E48905222CE33DBB003F566A /* Home */,
+				E48905132CE32ED5003F566A /* Phase.swift */,
+				E4F321A62CF1A9F800D35702 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +298,106 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		E489050D2CE32E59003F566A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E489051E2CE33A0F003F566A /* Section */,
+				E489050F2CE32E7C003F566A /* HomeView.swift */,
+				E48905112CE32EB5003F566A /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E489050E2CE32E64003F566A /* Organazation */ = {
+			isa = PBXGroup;
+			children = (
+				E48905432CEDD6E7003F566A /* OrganazationDetail */,
+				E489052B2CE721D9003F566A /* OrganazationCreateView.swift */,
+				E489052D2CE721F1003F566A /* OrganazationViewModel.swift */,
+				E489052F2CE75459003F566A /* OrganazationList.swift */,
+			);
+			path = Organazation;
+			sourceTree = "<group>";
+		};
+		E48905192CE3366C003F566A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E489051E2CE33A0F003F566A /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				E48905202CE33A28003F566A /* OrganazationViewCell.swift */,
+				E48905292CE346D7003F566A /* HomePopupView.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		E48905222CE33DBB003F566A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E48905232CE33DC5003F566A /* organazationModel.swift */,
+				E48905272CE343F7003F566A /* ScheduleModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E48905432CEDD6E7003F566A /* OrganazationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E48905442CEDD6FA003F566A /* OrganazationDetailView.swift */,
+				E48905462CEDD703003F566A /* OrganazationDetailViewModel.swift */,
+			);
+			path = OrganazationDetail;
+			sourceTree = "<group>";
+		};
+		E48905532CEF275D003F566A /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				E48905562CEF4996003F566A /* Plus */,
+				E48905512CEF2641003F566A /* RecordingView.swift */,
+				E48905542CEF276A003F566A /* RecordingViewModel.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		E48905562CEF4996003F566A /* Plus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plus;
+			sourceTree = "<group>";
+		};
+		E4F321AC2CF1AC2D00D35702 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				E4F321AD2CF1AE0800D35702 /* loading.gif */,
+				E4F321AA2CF1AC2A00D35702 /* bell.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		E4F321B42CF2223C00D35702 /* Organazation */ = {
+			isa = PBXGroup;
+			children = (
+				E4F321B52CF2224A00D35702 /* CreateOrganazationModel.swift */,
+				E4F321B72CF2D8A300D35702 /* JoinOrganazationModel.swift */,
+				E4F321B92CF2E0BC00D35702 /* OrganazationiDetailModel.swift */,
+			);
+			path = Organazation;
+			sourceTree = "<group>";
+		};
+		E4F321BD2CF2EDA500D35702 /* Meeting */ = {
+			isa = PBXGroup;
+			children = (
+				E4F321BE2CF2EDB000D35702 /* CreateMeetingModel.swift */,
+				E4F321C02CF32C2400D35702 /* DetailMeetingModel.swift */,
+			);
+			path = Meeting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +414,14 @@
 			dependencies = (
 			);
 			name = MettingApp;
+			packageProductDependencies = (
+				E489051A2CE3366C003F566A /* Kingfisher */,
+				E48905412CEDD6D0003F566A /* FSCalendar */,
+				E489054B2CEDD8BF003F566A /* SnapKit */,
+				E4F3219F2CF1A98900D35702 /* Alamofire */,
+				E4F321A42CF1A9D700D35702 /* SwiftKeychainWrapper */,
+				E4F321B02CF21C4B00D35702 /* MarkdownUI */,
+			);
 			productName = MettingApp;
 			productReference = E48904CE2CE32619003F566A /* MettingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -294,6 +494,14 @@
 				Base,
 			);
 			mainGroup = E48904C52CE32618003F566A;
+			packageReferences = (
+				E48905172CE33573003F566A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E48905402CEDD6BB003F566A /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				E489054A2CEDD8B6003F566A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E4F3219E2CF1A98000D35702 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E4F321A32CF1A9CD00D35702 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				E4F321AF2CF21C4200D35702 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+			);
 			productRefGroup = E48904CF2CE32619003F566A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,7 +520,9 @@
 			files = (
 				E48904D92CE3261B003F566A /* Preview Assets.xcassets in Resources */,
 				E48904D62CE3261B003F566A /* Assets.xcassets in Resources */,
+				E4F321AE2CF1AE0900D35702 /* loading.gif in Resources */,
 				E48905002CE327E4003F566A /* Color.xcassets in Resources */,
+				E4F321AB2CF1AC2A00D35702 /* bell.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,12 +547,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48905242CE33DC5003F566A /* organazationModel.swift in Sources */,
 				E48905052CE3299B003F566A /* View + Extension.swift in Sources */,
+				E48905102CE32E7C003F566A /* HomeView.swift in Sources */,
+				E489052C2CE721D9003F566A /* OrganazationCreateView.swift in Sources */,
+				E4F321BF2CF2EDB000D35702 /* CreateMeetingModel.swift in Sources */,
+				E48905472CEDD704003F566A /* OrganazationDetailViewModel.swift in Sources */,
 				E489050C2CE32A9A003F566A /* Services.swift in Sources */,
-				E48904D42CE32619003F566A /* ContentView.swift in Sources */,
+				E48905552CEF276A003F566A /* RecordingViewModel.swift in Sources */,
+				E489052A2CE346D7003F566A /* HomePopupView.swift in Sources */,
+				E4F321A22CF1A9AB00D35702 /* RequestInterceptor + Extension.swift in Sources */,
+				E4F321BC2CF2EA1B00D35702 /* MeetingService.swift in Sources */,
+				E48905162CE3351E003F566A /* LoadingView.swift in Sources */,
+				E4F321A92CF1AA2000D35702 /* APIEndpoint.swift in Sources */,
+				E48905492CEDD719003F566A /* CalendarView.swift in Sources */,
+				E4F321C12CF32C2400D35702 /* DetailMeetingModel.swift in Sources */,
+				E489052E2CE721F1003F566A /* OrganazationViewModel.swift in Sources */,
+				E48905212CE33A28003F566A /* OrganazationViewCell.swift in Sources */,
+				E48905452CEDD6FA003F566A /* OrganazationDetailView.swift in Sources */,
+				E48905122CE32EB5003F566A /* HomeViewModel.swift in Sources */,
+				E48905262CE3437F003F566A /* SeperateView.swift in Sources */,
+				E48905282CE343F7003F566A /* ScheduleModel.swift in Sources */,
+				E48905302CE75459003F566A /* OrganazationList.swift in Sources */,
+				E4F321A72CF1A9F800D35702 /* UserModel.swift in Sources */,
+				E48904D42CE32619003F566A /* SplashView.swift in Sources */,
+				E4F3219D2CF1A96F00D35702 /* Alamofire.swift in Sources */,
 				E489050A2CE32A2C003F566A /* DIContainer.swift in Sources */,
+				E48905522CEF2641003F566A /* RecordingView.swift in Sources */,
+				E4F321B82CF2D8A300D35702 /* JoinOrganazationModel.swift in Sources */,
 				E48904D22CE32619003F566A /* MettingAppApp.swift in Sources */,
 				E48905022CE32814003F566A /* Color + Extension.swift in Sources */,
+				E4F321B32CF221E300D35702 /* OrganazationService.swift in Sources */,
+				E48905142CE32ED5003F566A /* Phase.swift in Sources */,
+				E4F321BA2CF2E0BC00D35702 /* OrganazationiDetailModel.swift in Sources */,
+				E4F321B62CF2224A00D35702 /* CreateOrganazationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,11 +747,12 @@
 				DEVELOPMENT_TEAM = Q653PU93R6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MettingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,6 +760,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = WEDLE.MettingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,11 +780,12 @@
 				DEVELOPMENT_TEAM = Q653PU93R6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MettingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,6 +793,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = WEDLE.MettingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -672,6 +918,90 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E48905172CE33573003F566A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+		E48905402CEDD6BB003F566A /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		E489054A2CEDD8B6003F566A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		E4F3219E2CF1A98000D35702 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+		E4F321A32CF1A9CD00D35702 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+		E4F321AF2CF21C4200D35702 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E489051A2CE3366C003F566A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E48905172CE33573003F566A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		E48905412CEDD6D0003F566A /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E48905402CEDD6BB003F566A /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		E489054B2CEDD8BF003F566A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E489054A2CEDD8B6003F566A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		E4F3219F2CF1A98900D35702 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F3219E2CF1A98000D35702 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		E4F321A42CF1A9D700D35702 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F321A32CF1A9CD00D35702 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+		E4F321B02CF21C4B00D35702 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F321AF2CF21C4200D35702 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E48904C62CE32618003F566A /* Project object */;
 }

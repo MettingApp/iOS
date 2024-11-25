@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    static var pointColor : Color {
-        return Color("pointColor")
-    }
+    static let pointOriginColor : Color = .init("pointOriginColor")
+    static let pointOpacityColor : Color = .init("pointOpacityColor")
 }
