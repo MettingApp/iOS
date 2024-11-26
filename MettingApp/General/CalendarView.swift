@@ -29,6 +29,7 @@ struct CalendarView: UIViewRepresentable {
     var calenderData: [CalendarResult]
     
     @Binding var selectedData: [CalendarResult]
+    @Binding var selected: Bool
     @EnvironmentObject var viewModel: OrganazationDetailViewModel
     
     var groupedData: [Date: [CalendarResult]] {
@@ -62,6 +63,7 @@ struct CalendarView: UIViewRepresentable {
                 
             } else {
                 self.parent.selectedData = []
+                self.parent.selected = true
             }
         }
         
@@ -71,7 +73,15 @@ struct CalendarView: UIViewRepresentable {
             if let events = parent.groupedData[date], let eventImage = UIImage(named: "calendar_icon"), !events.isEmpty {
                 cell.setEventImage(date: date, image: eventImage)
             } else {
-                cell.setEventImage(date: date, image: nil)
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                if dateFormatter.string(from: date) == "2024-11-27" {
+                    cell.setEventImage(date: date, image: UIImage(named: "calendar_icon"))
+                } else if dateFormatter.string(from: date) == "2024-11-29"  {
+                    cell.setEventImage(date: date, image: UIImage(named: "calendar_icon"))
+                } else {
+                    cell.setEventImage(date: date, image: nil)
+                }
             }
             return cell
         }
